@@ -1,0 +1,12 @@
+
+<article class="home-about">
+  <h2>About Elixir Sydney</h2>
+  <p>We talk about Elixir and Erlang (and occasionally other things)</p>
+
+  <p class="mt-1">
+    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.a0ec3119d8db2bc5422f2144c89ad7a9.en.html#dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=elixirsydney&amp;show_count=true&amp;show_screen_name=true&amp;size=l&amp;time=1487642361501" style="position: static; visibility: visible; width: 250px; height: 28px;" data-screen-name="sydjs">
+    </iframe>
+  </p>
+  <img src="/images/elixir_sydney_400x400.jpg" alt="Elixir Sydney Logo">
+
+</article>

@@ -17,6 +17,9 @@ defmodule ElixirSydney.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/about", PageController, :about
+    # get "/conduct", PageController, :conduct
+    # get "/meetups", PageController, :meetups
   end
 
   # Other scopes may use custom stacks.

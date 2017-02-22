@@ -1,0 +1,14 @@
+<article id="hero" class="hero-meetup hero-meetup--next">
+  <section class="hero-intro hero-intro--hasmask">
+    <div class="hero-background"></div>
+    <div class="hero-intro-content">
+      <h5 class="subtitle">Next Meetup</h5>
+      <h1 class="title"><%= @meetup.title %></h1>
+      <p class="byline">
+        <strong><%= @meetup.date %></strong>
+      </p>
+      <p class="byline">
+        <%= @meetup.location %>
+      </p>
+    </div>
+</article>

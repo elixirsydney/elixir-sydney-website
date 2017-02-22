@@ -4,32 +4,118 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Hello ElixirSydney!</title>
+    <title>Elixir Sydney</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
-  <body>
-    <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
+  <body class="sitesection-home">
+    <div class="site-wrapper has-sticky-footer">
+      <header id="header" role="banner" class="header--home">
+        <nav role="navigation" class="navbar">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="/" title="Back to Home" class="site-branding"></a>
+              <a id="site-nav-toggle" href="javascript:;" class="site-nav-toggle">
+                <div class="patty"></div>
+              </a>
+            </div>
+            <div id="site-nav" class>
+              <nav role="navigation">
+                <ul class="navbar-nav navbar-nav--left">
+                  <li class="nav-item-home active">
+                    <a href="/">Elixir Sydney</a>
+                  </li>
+                  <li class="nav-item-about">
+                    <a href="/about">About</a>
+                  </li>
+                  <!-- <li class="nav-item-meetups">
+                    <a href="/meetups">Meetups</a>
+                  </li>
+                  <li class="nav-item-about">
+                    <a href="/conduct">Code of Conduct</a>
+                  </li> -->
+                </ul>
+                <ul class="navbar-nav navbar-nav--right">
+                </ul>
+              </nav>
+            </div>
+          </div>
         </nav>
-        <span class="logo"></span>
       </header>
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <main role="main">
+      <main role="main" class="site-body">
         <%= render @view_module, @view_template, assigns %>
       </main>
 
-    </div> <!-- /container -->
+      <footer class="site-footer site-footer--sticky">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h5 class="footer-heading">About</h5>
+              <p>We meet on the first Wednesday of each month.</p>
+              <ul class="list-inline">
+                <li>
+                  <a href="/about">More about Elixir Sydney</a>
+                </li>
+                <li>
+                  <a href="mailto:organisers@elixir.sydney">Contact us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-8">
+              <div class="row">
+                <div class="col-xs-4">
+                  <h5 class="footer-heading">Join Us</h5>
+                  <ul>
+                    <li>
+                      <a href="https://www.meetup.com/en-AU/sydney-ex/"  target="_blank">Meetup</a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/elixirsydney"  target="_blank">@elixirsydney</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xs-4">
+                  <h5 class="footer-heading">Resources</h5>
+                  <ul>
+                    <li>
+                      <a href="http://elixir-lang.org/"  target="_blank">Guides</a>
+                    </li>
+                    <li>
+                      <a href="https://hexdocs.pm/elixir"  target="_blank">Docs</a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/elixir-lang/elixir"  target="_blank">Source</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xs-4">
+                  <h5 class="footer-heading">Sponsors</h5>
+                  <ul>
+                    <li>
+                      <a href="https://pivotal.io" rel="external" target="_blank">Pivotal Labs</a>
+                      <i></i>
+                    </li>
+                    <li>
+                      <a href="http://alembic.com.au" rel="external" target="_blank">Alembic</a>
+                      <i></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row footer-copyright">
+            <p>Copyright © 2017 Elixir Sydney.</p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
   </body>
+
 </html>
