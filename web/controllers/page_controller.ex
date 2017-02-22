@@ -7,7 +7,8 @@ defmodule ElixirSydney.PageController do
       %Meetup{
         title: "Authentication, Recursion and Registries",
         date: "Wednesday 1st, March 2017",
-        location: "Pivotal Labs"
+        location: "Pivotal Labs",
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/237380598/"
       }
 
     render conn, "index.html", meetup: meetup

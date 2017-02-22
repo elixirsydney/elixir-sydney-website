@@ -2,13 +2,17 @@
   <section class="hero-intro hero-intro--hasmask">
     <div class="hero-background"></div>
     <div class="hero-intro-content">
-      <h5 class="subtitle">Next Meetup</h5>
-      <h1 class="title"><%= @meetup.title %></h1>
-      <p class="byline">
-        <strong><%= @meetup.date %></strong>
-      </p>
-      <p class="byline">
-        <%= @meetup.location %>
-      </p>
+      <%= link to: @meetup.url do %>
+        <h5 class="subtitle">Next Meetup</h5>
+        <h1 class="title">
+          <%= @meetup.title %>
+        </h1>
+        <p class="byline">
+          <strong><%= @meetup.date %></strong>
+        </p>
+        <p class="byline">
+          <%= @meetup.location %>
+        </p>
+      <% end %>
     </div>
 </article>
