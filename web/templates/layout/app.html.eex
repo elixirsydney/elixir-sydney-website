@@ -15,7 +15,7 @@
         <nav role="navigation" class="navbar">
           <div class="container">
             <div class="navbar-header">
-              <a href="/" title="Back to Home" class="site-branding"></a>
+              <%= link "", to: page_path(@conn, :index), title: "Back to Home", class: "site-branding" %>
               <a id="site-nav-toggle" href="javascript:;" class="site-nav-toggle">
                 <div class="patty"></div>
               </a>
@@ -24,10 +24,10 @@
               <nav role="navigation">
                 <ul class="navbar-nav navbar-nav--left">
                   <li class="nav-item-home active">
-                    <%= link "Elixir Sydney", to: "/" %>
+                    <%= link "Elixir Sydney", to: page_path(@conn, :index) %>
                   </li>
                   <li class="nav-item-about">
-                    <%= link "About", to: "/about" %>
+                    <%= link "About", to: page_path(@conn, :about) %>
                   </li>
                   <!-- <li class="nav-item-meetups">
                     <a href="/meetups">Meetups</a>
@@ -56,7 +56,7 @@
               <p>We meet on the first Wednesday of each month.</p>
               <ul class="list-inline">
                 <li>
-                  <%= link "More about Elixir Sydney", to: "/about" %>
+                  <%= link "More about Elixir Sydney", to: page_path(@conn, :about) %>
                 </li>
                 <li>
                   <%= link "Contact us", to: "mailto:organisers@elixir.sydney" %>
