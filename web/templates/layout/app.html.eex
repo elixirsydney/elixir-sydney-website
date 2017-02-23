@@ -24,10 +24,10 @@
               <nav role="navigation">
                 <ul class="navbar-nav navbar-nav--left">
                   <li class="nav-item-home active">
-                    <a href="/">Elixir Sydney</a>
+                    <%= link "Elixir Sydney", to: "/" %>
                   </li>
                   <li class="nav-item-about">
-                    <a href="/about">About</a>
+                    <%= link "About", to: "/about" %>
                   </li>
                   <!-- <li class="nav-item-meetups">
                     <a href="/meetups">Meetups</a>
@@ -56,10 +56,10 @@
               <p>We meet on the first Wednesday of each month.</p>
               <ul class="list-inline">
                 <li>
-                  <a href="/about">More about Elixir Sydney</a>
+                  <%= link "More about Elixir Sydney", to: "/about" %>
                 </li>
                 <li>
-                  <a href="mailto:organisers@elixir.sydney">Contact us</a>
+                  <%= link "Contact us", to: "mailto:organisers@elixir.sydney" %>
                 </li>
               </ul>
             </div>
@@ -69,10 +69,10 @@
                   <h5 class="footer-heading">Join Us</h5>
                   <ul>
                     <li>
-                      <a href="https://www.meetup.com/en-AU/sydney-ex/"  target="_blank">Meetup</a>
+                      <%= link "Meetup", to: "https://www.meetup.com/en-AU/sydney-ex/", target: "_blank" %>
                     </li>
                     <li>
-                      <a href="https://twitter.com/elixirsydney"  target="_blank">@elixirsydney</a>
+                      <%= link "@elixirsydney", to: "https://twitter.com/elixirsydney", target: "_blank" %>
                     </li>
                   </ul>
                 </div>
@@ -80,13 +80,13 @@
                   <h5 class="footer-heading">Resources</h5>
                   <ul>
                     <li>
-                      <a href="http://elixir-lang.org/"  target="_blank">Guides</a>
+                      <%= link "Guides", to: "http://elixir-lang.org/", target: "_blank" %>
                     </li>
                     <li>
-                      <a href="https://hexdocs.pm/elixir"  target="_blank">Docs</a>
+                      <%= link "Docs", to: "https://hexdocs.pm/elixir", target: "_blank" %>
                     </li>
                     <li>
-                      <a href="https://github.com/elixir-lang/elixir"  target="_blank">Source</a>
+                      <%= link "Source", to: "https://github.com/elixir-lang/elixir", target: "_blank" %>
                     </li>
                   </ul>
                 </div>
@@ -94,12 +94,10 @@
                   <h5 class="footer-heading">Sponsors</h5>
                   <ul>
                     <li>
-                      <a href="https://pivotal.io" rel="external" target="_blank">Pivotal Labs</a>
-                      <i></i>
+                      <%= link "Pivotal Labs", to: "https://pivotal.io", target: "_blank" %>
                     </li>
                     <li>
-                      <a href="http://alembic.com.au" rel="external" target="_blank">Alembic</a>
-                      <i></i>
+                      <%= link "Alembic", to: "http://alembic.com.au", target: "_blank" %>
                     </li>
                   </ul>
                 </div>
@@ -107,7 +105,7 @@
             </div>
           </div>
           <div class="row footer-copyright">
-            <p>Thanks to <a href="http://www.sydjs.com/" target="_blank">SydJS</a> for the website template</p>
+            <p>Thanks to <%= link "SydJS", to: "http://www.sydjs.com/", target: "_blank" %> for the website template</p>
           </div>
         </div>
       </footer>
