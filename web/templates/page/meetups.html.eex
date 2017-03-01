@@ -11,7 +11,7 @@
   </div>
   <div class="tile ph-1 pv-1">
 
-    <%= render "_meetup.html", meetup: @next_meetup, past: false, conn: @conn %>
+    <%= render "_meetup.html", meetup: @next_meetup, past: nil, conn: @conn %>
 
     <hr class="mv-2">
     <div class="meetup-cta">

@@ -11,7 +11,6 @@ defmodule ElixirSydney.Meetup do
     tl all
   end
 
-
   def all do
     [
       %Meetup{

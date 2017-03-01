@@ -1,5 +1,5 @@
 <div class="container-sm">
   <div class="tile ph-1 pv-1">
-    <%= render "_meetup.html", meetup: @meetup, past: false %>
+    <%= render "_meetup.html", meetup: @meetup, past: true %>
   </div>
 </div>
