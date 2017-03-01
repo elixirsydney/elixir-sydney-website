@@ -35,6 +35,9 @@
               <li>
                 <%= link "Elixir Camp", to: "http://elixir.camp/", target: "_blank" %>
               </li>
+              <li>
+                <%= link "Exorcism Team", to: "http://exercism.io/teams/elixir-sydney", target: "_blank" %>
+              </li>
             </ul>
           </div>
           <div class="col-xs-3">
