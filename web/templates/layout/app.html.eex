@@ -9,111 +9,17 @@
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
-  <body class="sitesection-home">
+  <body class="sitesection-<%= @page_name %>">
     <div class="site-wrapper has-sticky-footer">
-      <header id="header" role="banner" class="header--home">
-        <nav role="navigation" class="navbar">
-          <div class="container">
-            <div class="navbar-header">
-              <%= link "", to: page_path(@conn, :index), title: "Back to Home", class: "site-branding" %>
-              <a id="site-nav-toggle" href="javascript:;" class="site-nav-toggle">
-                <div class="patty"></div>
-              </a>
-            </div>
-            <div id="site-nav" class>
-              <nav role="navigation">
-                <ul class="navbar-nav navbar-nav--left">
-                  <li class="nav-item-home active">
-                    <%= link "Elixir Sydney", to: page_path(@conn, :index) %>
-                  </li>
-                  <li class="nav-item-about">
-                    <%= link "About", to: page_path(@conn, :about) %>
-                  </li>
-                  <!-- <li class="nav-item-meetups">
-                    <a href="/meetups">Meetups</a>
-                  </li>
-                  <li class="nav-item-about">
-                    <a href="/conduct">Code of Conduct</a>
-                  </li> -->
-                </ul>
-                <ul class="navbar-nav navbar-nav--right">
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <%= render "_header.html", assigns %>
 
       <main role="main" class="site-body">
         <%= render @view_module, @view_template, assigns %>
       </main>
 
-      <footer class="site-footer site-footer--sticky">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <h5 class="footer-heading">About</h5>
-              <p>We meet on the first Wednesday of each month.</p>
-              <ul class="list-inline">
-                <li>
-                  <%= link "More about Elixir Sydney", to: page_path(@conn, :about) %>
-                </li>
-                <li>
-                  <%= link "Contact us", to: "mailto:organisers@elixir.sydney" %>
-                </li>
-              </ul>
-            </div>
-            <div class="col-sm-8">
-              <div class="row">
-                <div class="col-xs-4">
-                  <h5 class="footer-heading">Join Us</h5>
-                  <ul>
-                    <li>
-                      <%= link "Meetup", to: "https://www.meetup.com/en-AU/sydney-ex/", target: "_blank" %>
-                    </li>
-                    <li>
-                      <%= link "@elixirsydney", to: "https://twitter.com/elixirsydney", target: "_blank" %>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-xs-4">
-                  <h5 class="footer-heading">Resources</h5>
-                  <ul>
-                    <li>
-                      <%= link "Guides", to: "http://elixir-lang.org/", target: "_blank" %>
-                    </li>
-                    <li>
-                      <%= link "Docs", to: "https://hexdocs.pm/elixir", target: "_blank" %>
-                    </li>
-                    <li>
-                      <%= link "Source", to: "https://github.com/elixir-lang/elixir", target: "_blank" %>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-xs-4">
-                  <h5 class="footer-heading">Sponsors</h5>
-                  <ul>
-                    <li>
-                      <%= link "Pivotal Labs", to: "https://pivotal.io", target: "_blank" %>
-                    </li>
-                    <li>
-                      <%= link "Alembic", to: "http://alembic.com.au", target: "_blank" %>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row footer-copyright">
-            <p>Thanks to <%= link "SydJS", to: "http://www.sydjs.com/", target: "_blank" %> for the website template</p>
-          </div>
-        </div>
-      </footer>
-
+      <%= render "_footer.html", assigns %>
     </div>
 
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-
   </body>
-
 </html>

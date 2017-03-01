@@ -10,7 +10,9 @@
         <strong><%= @meetup.date %></strong>
       </p>
       <p class="byline">
-        <%= @meetup.location %> <%= link " - directions", to: @meetup.location_url, target: "_blank" %>
+        <%= @meetup.location %>
+        &mdash;
+        <%= link "Directions", to: @meetup.location_url, target: "_blank" %>
       </p>
     </div>
     <div id="react-hero-button">
@@ -40,27 +42,7 @@
               <div class="meetup-talks">
                 <ul class="list-unstyled talks-list">
                   <%= for talk <- @meetup.talks do %>
-                    <li class="talk row">
-                      <div class="col-xs-3">
-                        <div class="talk__speakers">
-                          <img src="<%= talk.speaker.avatar_url %>" width="160" height="160" alt="<%= talk.speaker.name %>" class="talk__photo">
-                        </div>
-                      </div>
-                      <div class="col-xs-9">
-                        <div class="talk-summary">
-                          <h5 class="title"><%= talk.title %></h5>
-                          <p class="subtitle mb-1">
-                            by
-                            <%= link talk.speaker.name, to: talk.speaker.meetup_url %>
-                          </p>
-                          <p class="subtitle mb-1"> <%= talk.description %></p>
-                          <div class="summary">
-                            <p>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                    <%= render "_talk.html", talk: talk %> 
                   <% end %>
                 </ul>
               </div>

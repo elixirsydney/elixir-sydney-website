@@ -1,0 +1,20 @@
+<div class="page-content">
+  <div class="container">
+    <div class="timeline">
+      <div class="timeline-path"></div>
+      <div class="timeline-item--offset"></div>
+      <%= for two_meetups <- Enum.chunk(@meetups, 2, 2, []) do %>
+        <%= for {odd_or_even, meetup} <- Enum.zip(["odd", "even"], two_meetups) do %>
+          <div class="timeline-item timeline-item--<%= odd_or_even %>">
+            <div class="timeline-item-node"></div>
+            <a href="/meetups" class="timeline-item-inner">
+              <h6 class="text-caps text-danger"><%= meetup.short_date %></h6>
+              <h4><%= meetup.title %></h4>
+              <%= meetup.description %>
+            </a>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

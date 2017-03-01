@@ -1,0 +1,29 @@
+<header id="header" role="banner" class="header--<%= @page_name == "home" && "home" || "page" %>">
+  <nav role="navigation" class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link "", to: page_path(@conn, :index), title: "Back to Home", class: "site-branding" %>
+        <a id="site-nav-toggle" href="javascript:;" class="site-nav-toggle">
+          <div class="patty"></div>
+        </a>
+      </div>
+      <div id="site-nav" class>
+        <nav role="navigation">
+          <ul class="navbar-nav navbar-nav--left">
+            <li class="nav-item-home active">
+              <%= link "Elixir Sydney", to: page_path(@conn, :index) %>
+            </li>
+            <li class="nav-item-about">
+              <%= link "About", to: page_path(@conn, :about) %>
+            </li>
+            <li class="nav-item-meetups">
+              <%= link "Meetups", to: page_path(@conn, :meetups) %>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav--right">
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </nav>
+</header>

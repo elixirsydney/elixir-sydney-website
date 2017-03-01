@@ -1,22 +1,15 @@
-
-.site-wrapper.has-sticky-footer {
-  background: #999;
-}
 .hero-meetup--next .hero-background {
   background:url("/images/bridge.jpg") no-repeat center center / cover;
   background-color:#333
 }
+
 .welcome {
   color: #fff;
   text-align: center;
   z-index: 1000;
 }
+
 .home-about{
-  background:url("") center bottom no-repeat #f9f9f9;
-  border-top:1px solid rgba(0,0,0,0.05);
-  overflow:hidden;
-  position:relative;
-  text-align:center;
-  padding-top:3em;
-  padding-bottom:18em;
+  text-align: center;
+  margin: 3rem 0;
 }

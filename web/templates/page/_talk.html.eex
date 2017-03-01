@@ -1,0 +1,21 @@
+<li class="talk row">
+  <div class="col-xs-3">
+    <div class="talk__speakers">
+      <img src="<%= @talk.speaker.avatar_url %>" width="160" height="160" alt="<%= @talk.speaker.name %>" class="talk__photo">
+    </div>
+  </div>
+  <div class="col-xs-9">
+    <div class="talk-summary">
+      <h5 class="title"><%= @talk.title %></h5>
+      <p class="subtitle mb-1">
+        by
+        <%= link @talk.speaker.name, to: @talk.speaker.meetup_url %>
+      </p>
+      <p class="subtitle mb-1"> <%= @talk.description %></p>
+      <div class="summary">
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+</li>

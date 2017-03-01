@@ -19,7 +19,7 @@ defmodule ElixirSydney.Router do
     get "/", PageController, :index
     get "/about", PageController, :about
     # get "/conduct", PageController, :conduct
-    # get "/meetups", PageController, :meetups
+    get "/meetups", PageController, :meetups
   end
 
   # Other scopes may use custom stacks.
