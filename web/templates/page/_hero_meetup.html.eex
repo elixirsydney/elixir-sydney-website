@@ -49,7 +49,10 @@
                       <div class="col-xs-9">
                         <div class="talk-summary">
                           <h5 class="title"><%= talk.title %></h5>
-                          <pc lass="subtitle mb-1">by <%= talk.speaker.name %>></p>
+                          <p class="subtitle mb-1">
+                            by
+                            <%= link talk.speaker.name, to: talk.speaker.meetup_url %>
+                          </p>
                           <p class="subtitle mb-1"> <%= talk.description %></p>
                           <div class="summary">
                             <p>
