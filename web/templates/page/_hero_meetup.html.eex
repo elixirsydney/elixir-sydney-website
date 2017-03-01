@@ -2,17 +2,69 @@
   <section class="hero-intro hero-intro--hasmask">
     <div class="hero-background"></div>
     <div class="hero-intro-content">
-      <%= link to: @meetup.url do %>
-        <h5 class="subtitle">Next Meetup</h5>
-        <h1 class="title">
-          <%= @meetup.title %>
-        </h1>
-        <p class="byline">
-          <strong><%= @meetup.date %></strong>
-        </p>
-        <p class="byline">
-          <%= @meetup.location %>
-        </p>
-      <% end %>
+      <h5 class="subtitle">Next Meetup</h5>
+      <h1 class="title">
+        <%= @meetup.title %>
+      </h1>
+      <p class="byline">
+        <strong><%= @meetup.date %></strong>
+      </p>
+      <p class="byline">
+        <%= @meetup.location %> <%= link " - directions", to: @meetup.location_url, target: "_blank" %>
+      </p>
     </div>
+    <div id="react-hero-button">
+      <div class="hero-button">
+        <div class="alert alert-success mb-0 text-center">
+          <%=
+            link "Sign Up Now",
+              to: @meetup.url,
+              target: "_blank",
+              class: ""
+          %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="description">
+                <p><%= @meetup.description %></p>
+              </div>
+            </div>
+            <div class="col-md-6 col-md-offset-1">
+              <div class="meetup-talks">
+                <ul class="list-unstyled talks-list">
+                  <%= for talk <- @meetup.talks do %>
+                    <li class="talk row">
+                      <div class="col-xs-3">
+                        <div class="talk__speakers">
+                          <img src="<%= talk.speaker.avatar_url %>" width="160" height="160" alt="<%= talk.speaker.name %>" class="talk__photo">
+                        </div>
+                      </div>
+                      <div class="col-xs-9">
+                        <div class="talk-summary">
+                          <h5 class="title"><%= talk.title %></h5>
+                          <pc lass="subtitle mb-1">by <%= talk.speaker.name %>></p>
+                          <p class="subtitle mb-1"> <%= talk.description %></p>
+                          <div class="summary">
+                            <p>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </article>
