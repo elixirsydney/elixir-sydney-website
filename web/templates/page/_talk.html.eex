@@ -11,7 +11,9 @@
         by
         <%= link @talk.speaker.name, to: @talk.speaker.meetup_url %>
       </p>
-      <p class="subtitle mb-1"> <%= @talk.description %></p>
+      <p class="subtitle mb-1">
+        <%= markdown_to_html @talk.description %>
+      </p>
       <div class="summary">
         <p>
         </p>

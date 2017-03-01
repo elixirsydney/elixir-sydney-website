@@ -14,7 +14,7 @@
               <h4>
                 <%= meetup.title %>
               </h4>
-              <%= meetup.description %>
+              <%= markdown_to_html meetup.description %>
             <% end %>
           </div>
         <% end %>

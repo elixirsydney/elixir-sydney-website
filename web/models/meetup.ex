@@ -4,11 +4,11 @@ defmodule ElixirSydney.Meetup do
   alias ElixirSydney.{Meetup, Talk, Speaker}
 
   def next_meetup do
-    hd all
+    hd all()
   end
 
   def past_meetups do
-    tl all
+    tl all()
   end
 
   def all do
@@ -76,21 +76,21 @@ defmodule ElixirSydney.Meetup do
         ]
       },
       %Meetup{
-        title: "Blah",
-        slug: "blah",
-        date: ~D[2017-02-04],
+        title: "Sydney Elixir Meetup",
+        slug: "sydney-elixir-meetup",
+        date: ~D[2017-02-01],
         short_date: "February 2017",
-        long_date: "Wednesday 4th, February 2017, 6:00pm - 8:30pm",
+        long_date: "Wednesday 1st, February 2017, 6:00pm - 8:30pm",
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """
-        This month we'll be talking about a topic that we haven't covered before, but is important for securing your webapps: Authentication with JWT and their usage with Plugs, Joken and Phoenix.
+        Nick Gunn will reveal the awesome power of Supervisors.
 
-        We'll also be getting with writing Elixir in a recursive style. This may not be what you're used from other languages but it's pretty great in Elixir and Erlang. We'll learn how to write the ridiculously fast Elixir functions that are easy to read.
+        Robin Hilliard will show us How to release Hex packages and tell us about his first: DefUnit
 
-        Lastly we'll learn about what's new in Elixir 1.4 with a deep dive into the new Process Registry module.
+        We'll also discuss what has been happening in Elixir-land (like Elixir 1.4.1 and friends).
 
-        It's going to be a great meetup, so come along and join us!
+        Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers. 
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/237380598/",
         talks: [
@@ -101,8 +101,8 @@ defmodule ElixirSydney.Meetup do
             """,
             speaker: %Speaker{
               name: "Nick Gunn",
-              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/c/2/d/a/member_115669882.jpeg",
-              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/43452202/",
+              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/s/img/2982428616572973604/noPhoto_80.gif",
+              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/205821026/",
               website_url: "",
               twitter: ""
             }
@@ -114,8 +114,8 @@ defmodule ElixirSydney.Meetup do
             """,
             speaker: %Speaker{
               name: "Robin Hilliard",
-              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
-              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
+              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/a/5/2/f/member_3822287.jpeg",
+              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/7114884/",
               website_url: "",
               twitter: ""
             }

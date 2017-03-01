@@ -8,7 +8,7 @@
 <div class="meetup-content">
   <h2 class="mv-5"><%= @meetup.title %></h2>
   <h5 class="mb-1"><%= @meetup.long_date %></h5>
-  <p><%= @meetup.description %></p>
+  <p><%= markdown_to_html @meetup.description %></p>
 
   <hr class="mv-2">
   <ul class="meetup-talks">
