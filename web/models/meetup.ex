@@ -90,7 +90,7 @@ defmodule ElixirSydney.Meetup do
 
         We'll also discuss what has been happening in Elixir-land (like Elixir 1.4.1 and friends).
 
-        Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers. 
+        Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/237380598/",
         talks: [
@@ -118,6 +118,166 @@ defmodule ElixirSydney.Meetup do
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/7114884/",
               website_url: "",
               twitter: ""
+            }
+          }
+        ]
+      },
+      %Meetup{
+        title: "The OTP Edition",
+        slug: "the-otp-edition",
+        date: ~D[2016-12-07],
+        short_date: "December 2016",
+        long_date: "Wednesday 7th, December 2016, 6:00pm - 8:30pm",
+        location: "Pivotal Labs, Level 11, 155 Clarence Street",
+        location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
+        description: """
+        We'll be covering OTP from the beginning in the last meetup for the year.
+        """,
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/235288631/",
+        talks: [
+          %Talk{
+            title: "",
+            description: """
+            """,
+            speaker: %Speaker{
+              name: "",
+              avatar_url: "",
+              meetup_url: "",
+              website_url: "",
+              twitter: ""
+            }
+          },
+          %Talk{
+            title: "",
+            description: """
+            """,
+            speaker: %Speaker{
+              name: "",
+              avatar_url: "",
+              meetup_url: "",
+              website_url: "",
+              twitter: ""
+            }
+          }
+        ]
+      },
+      %Meetup{
+        title: "Back to Basics Part 2",
+        slug: "back-to-basics-part-2",
+        date: ~D[2016-11-02],
+        short_date: "November 2016",
+        long_date: "Wednesday 2nd, November 2016, 6:00pm - 8:30pm",
+        location: "Pivotal Labs, Level 11, 155 Clarence Street",
+        location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
+        description: """
+        We're going to keep going with our beginners focus this month continuing on from last month.
+
+        We'll be looking at some more practical exercises and tackling them as a group and also in pairs.
+        """,
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/234729669/",
+        talks: [
+          %Talk{
+            title: "",
+            description: """
+            """,
+            speaker: %Speaker{
+              name: "",
+              avatar_url: "",
+              meetup_url: "",
+              website_url: "",
+              twitter: ""
+            }
+          },
+          %Talk{
+            title: "",
+            description: """
+            """,
+            speaker: %Speaker{
+              name: "",
+              avatar_url: "",
+              meetup_url: "",
+              website_url: "",
+              twitter: ""
+            }
+          }
+        ]
+      },
+      %Meetup{
+        title: "Back to Basics Part 1",
+        slug: "back-to-basics-part-1",
+        date: ~D[2016-10-05],
+        short_date: "October 2016",
+        long_date: "Wednesday 5th, October 2016, 6:00pm - 8:30pm",
+        location: "Pivotal Labs, Level 11, 155 Clarence Street",
+        location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
+        description: """
+        This month we'll be going back to basics as a way to help those new to Elixir to get up to speed quickly. We'll be doing short talks with Q&A.
+        """,
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/234518782/",
+        talks: [
+          %Talk{
+            title: "Elixir Syntax Basics",
+            description: """
+            Elixir Syntax Basics
+            """,
+            speaker: %Speaker{
+              name: "Andrew Harvey",
+              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/5/a/3/e/member_224183102.jpeg",
+              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/11138446/",
+              website_url: "",
+              twitter: "@mootpointer"
+            }
+          },
+          %Talk{
+            title: "Pattern Matching",
+            description: """
+            Pattern Matching
+            """,
+            speaker: %Speaker{
+              name: "James Sadler",
+              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/2/8/f/b/member_258850491.jpeg",
+              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/202221787/",
+              website_url: "",
+              twitter: "@freshtonic"
+            }
+          },
+          %Talk{
+            title: "Intro to Plugs",
+            description: """
+            Intro to Plugs
+            """,
+            speaker: %Speaker{
+              name: "Josh Price",
+              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
+              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
+              website_url: "",
+              twitter: "@joshprice"
+            }
+          },
+          %Talk{
+            title: "Intro to Phoenix",
+            description: """
+            Intro to Phoenix
+            """,
+            speaker: %Speaker{
+              name: "Geoff Hodgson",
+              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/d/e/2/8/member_138056872.jpeg",
+              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/105623792/",
+              website_url: "",
+              twitter: "@geoffroh"
+            }
+          },
+          %Talk{
+            title: "Mix, ExUnit and Advanced Pattern Matching",
+            description: """
+            Mix, ExUnit and Advanced Pattern Matching
+            """,
+            speaker: %Speaker{
+              name: "Josh Price",
+              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
+              meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
+              website_url: "",
+              twitter: "@joshprice"
             }
           }
         ]
