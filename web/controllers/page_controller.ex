@@ -21,4 +21,18 @@ defmodule ElixirSydney.PageController do
       past_meetups: Meetup.past_meetups,
       page_name: "meetups"
   end
+
+  def meetup(conn, %{"slug" => slug}) do
+    meetup =
+      Meetup.past_meetups
+      |> Enum.find(& &1.slug == slug)
+
+    if meetup do
+      render conn, "meetup.html",
+        meetup: meetup,
+        page_name: "meetup"
+    else
+      redirect conn, to: page_path(conn, :meetups)
+    end
+  end
 end

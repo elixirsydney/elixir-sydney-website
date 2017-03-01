@@ -1,5 +1,5 @@
 defmodule ElixirSydney.Meetup do
-  defstruct [:title, :short_date, :date, :location, :location_url, :description, :url, :talks]
+  defstruct [:title, :slug, :short_date, :long_date, :date, :location, :location_url, :description, :url, :talks]
 
   alias ElixirSydney.{Meetup, Talk, Speaker}
 
@@ -11,11 +11,14 @@ defmodule ElixirSydney.Meetup do
     tl all
   end
 
+
   def all do
     [
       %Meetup{
         title: "Authentication, Recursion and Registries",
-        date: "Wednesday 1st, March 2017, 6:00pm - 8:30pm",
+        slug: "authentication-recursion-and-registries",
+        date: ~D[2017-03-01],
+        long_date: "Wednesday 1st, March 2017, 6:00pm - 8:30pm",
         short_date: "March 2017",
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
@@ -75,8 +78,10 @@ defmodule ElixirSydney.Meetup do
       },
       %Meetup{
         title: "Blah",
+        slug: "blah",
+        date: ~D[2017-02-04],
         short_date: "February 2017",
-        date: "Wednesday 1st, February 2017, 6:00pm - 8:30pm",
+        long_date: "Wednesday 4th, February 2017, 6:00pm - 8:30pm",
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """

@@ -7,11 +7,15 @@
         <%= for {odd_or_even, meetup} <- Enum.zip(["odd", "even"], two_meetups) do %>
           <div class="timeline-item timeline-item--<%= odd_or_even %>">
             <div class="timeline-item-node"></div>
-            <a href="/meetups" class="timeline-item-inner">
-              <h6 class="text-caps text-danger"><%= meetup.short_date %></h6>
-              <h4><%= meetup.title %></h4>
+            <%= link to: page_path(@conn, :meetup, meetup.slug), class: "timeline-item-inner" do %>
+              <h6 class="text-caps text-danger">
+                <%= meetup.short_date %>
+              </h6>
+              <h4>
+                <%= meetup.title %>
+              </h4>
               <%= meetup.description %>
-            </a>
+            <% end %>
           </div>
         <% end %>
       <% end %>

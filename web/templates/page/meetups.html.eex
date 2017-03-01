@@ -10,25 +10,9 @@
     </p>
   </div>
   <div class="tile ph-1 pv-1">
-    <div class="meetup-calendar calendar hidden-xs hidden-sm">
-      <div class="calendar__header">Mar</div>
-      <div class="calendar__body">
-        <div class="calendar__date">1</div>
-        <div class="calendar__year">2017</div>
-      </div>
-    </div>
-    <div class="meetup-content">
-      <h2 class="mv-5"><%= @next_meetup.title %></h2>
-      <h5 class="mb-1"><%= @next_meetup.date %></h5>
-      <p><%= @next_meetup.description %></p>
 
-      <hr class="mv-2">
-      <ul class="meetup-talks">
-        <%= for talk <- @next_meetup.talks do %>
-          <%= render "_talk.html", talk: talk %>
-        <% end %>
-      </ul>
-    </div>
+    <%= render "_meetup.html", meetup: @next_meetup, past: false, conn: @conn %>
+
     <hr class="mv-2">
     <div class="meetup-cta">
       <div class="alert alert-success mb-0 text-center">
@@ -38,4 +22,4 @@
   </div>
 </div>
 
-<%= render "_past_meetups.html", meetups: IO.inspect @past_meetups %>
+<%= render "_past_meetups.html", meetups: @past_meetups, conn: @conn %>
