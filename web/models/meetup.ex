@@ -51,6 +51,7 @@ defmodule ElixirSydney.Meetup do
             You might not be used to writing code in a recursive style if you're coming from a more imperative language. Heard of Tail Recursion or Tail Call Optimisation, but not sure what it really means?
 
             Josh will demystify writing recursive functions that are blazingly fast and help you avoid some of the traps.
+            [Watch the video](https://www.youtube.com/watch?v=56Ui7nFg7WA)
             """,
             speaker: %Speaker{
               name: "Josh Price",
