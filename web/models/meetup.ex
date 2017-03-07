@@ -1,5 +1,5 @@
 defmodule ElixirSydney.Meetup do
-  defstruct [:title, :slug, :short_date, :long_date, :date, :location, :location_url, :description, :url, :talks]
+  defstruct [:title, :slug, :short_date, :long_date, :date, :location, :location_url, :description, :presenter_media, :url, :talks]
 
   alias ElixirSydney.{Meetup, Talk, Speaker}
 
@@ -25,6 +25,7 @@ defmodule ElixirSydney.Meetup do
         With the new updates to Phoenix 1.3 and Ecto 2.1, we should take another look at the things we can do with Phoenix and Ecto.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/238021480/",
+        presenter_media: "",
         talks: [
           %Talk{
             title: "Amazing Talk",
@@ -70,6 +71,7 @@ defmodule ElixirSydney.Meetup do
         It's going to be a great meetup, so come along and join us!
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/237380598/",
+        presenter_media: "",
         talks: [
           %Talk{
             title: "Authentication with JWT",
@@ -90,8 +92,8 @@ defmodule ElixirSydney.Meetup do
             You might not be used to writing code in a recursive style if you're coming from a more imperative language. Heard of Tail Recursion or Tail Call Optimisation, but not sure what it really means?
 
             Josh will demystify writing recursive functions that are blazingly fast and help you avoid some of the traps.
-            [Watch the video](https://www.youtube.com/watch?v=56Ui7nFg7WA)
             """,
+            video_url: "https://www.youtube.com/watch?v=56Ui7nFg7WA",
             speaker: %Speaker{
               name: "Josh Price",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
@@ -133,12 +135,14 @@ defmodule ElixirSydney.Meetup do
         Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/237380598/",
+        presenter_media: "",
         talks: [
           %Talk{
             title: "Introduction to Supervisors",
             description: """
             Want to know more about supervisors? Nick has got the talk for you.
             """,
+            slide_url: "http://blog.ausimian.net/supervision-presentation/#/",
             speaker: %Speaker{
               name: "Nick Gunn",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/s/img/2982428616572973604/noPhoto_80.gif",
@@ -174,6 +178,7 @@ defmodule ElixirSydney.Meetup do
         We'll be covering OTP from the beginning in the last meetup for the year.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/235288631/",
+        presenter_media: "",
         talks: [
           %Talk{
             title: "",
@@ -215,6 +220,7 @@ defmodule ElixirSydney.Meetup do
         We'll be looking at some more practical exercises and tackling them as a group and also in pairs.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/234729669/",
+        presenter_media: "",
         talks: [
           %Talk{
             title: "",
@@ -254,6 +260,7 @@ defmodule ElixirSydney.Meetup do
         This month we'll be going back to basics as a way to help those new to Elixir to get up to speed quickly. We'll be doing short talks with Q&A.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/234518782/",
+        presenter_media: "",
         talks: [
           %Talk{
             title: "Elixir Syntax Basics",
