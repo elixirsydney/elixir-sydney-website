@@ -14,6 +14,45 @@ defmodule ElixirSydney.Meetup do
   def all do
     [
       %Meetup{
+        title: "Phoenix and Ecto",
+        slug: "phoenix-and-ecto",
+        date: ~D[2016-04-05],
+        short_date: "April 2017",
+        long_date: "Wednesday 5th, April 2017, 6:00pm - 8:30pm",
+        location: "Pivotal Labs, Level 11, 155 Clarence Street",
+        location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
+        description: """
+        With the new updates to Phoenix 1.3 and Ecto 2.1, we should take another look at the things we can do with Phoenix and Ecto.
+        """,
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/238021480/",
+        talks: [
+          %Talk{
+            title: "Amazing Talk",
+            description: """
+            """,
+            speaker: %Speaker{
+              name: "This could be you",
+              avatar_url: "",
+              meetup_url: "",
+              website_url: "",
+              twitter: ""
+            }
+          },
+          %Talk{
+            title: "Fascinating discussion",
+            description: """
+            """,
+            speaker: %Speaker{
+              name: "Put your hand up now",
+              avatar_url: "",
+              meetup_url: "",
+              website_url: "",
+              twitter: ""
+            }
+          }
+        ]
+      },
+      %Meetup{
         title: "Authentication, Recursion and Registries",
         slug: "authentication-recursion-and-registries",
         date: ~D[2017-03-01],
