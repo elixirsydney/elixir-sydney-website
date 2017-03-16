@@ -1,7 +1,7 @@
 <li class="talk row">
   <div class="col-xs-3">
     <div class="talk__speakers">
-      <img src="<%= @talk.speaker.avatar_url %>" width="160" height="160" alt="<%= @talk.speaker.name %>" class="talk__photo">
+      <img src="<%= @talk.presenter.avatar_url %>" width="160" height="160" alt="<%= @talk.presenter.name %>" class="talk__photo">
     </div>
   </div>
   <div class="col-xs-9">
@@ -9,7 +9,7 @@
       <h5 class="title"><%= @talk.title %></h5>
       <p class="subtitle mb-1">
         by
-        <%= link @talk.speaker.name, to: @talk.speaker.meetup_url %>
+        <%= link @talk.presenter.name, to: @talk.presenter.meetup_url %>
       </p>
       <p class="subtitle mb-1">
         <%= markdown_to_html @talk.description %>
