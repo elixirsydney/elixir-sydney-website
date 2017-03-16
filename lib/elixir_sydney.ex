@@ -1,6 +1,16 @@
 defmodule ElixirSydney do
   use Application
 
+  def model do
+    quote do
+      use Ecto.Schema
+
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+    end
+  end
+
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
   def start(_type, _args) do
@@ -20,5 +30,13 @@ defmodule ElixirSydney do
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: ElixirSydney.Supervisor]
     Supervisor.start_link(children, opts)
+  end
+
+  @doc """
+    When used, dispatch to the appropriate controller/view/etc.
+  """
+
+  defmacro __using__(which) when is_atom(which) do
+    apply(__MODULE__, which, [])
   end
 end

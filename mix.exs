@@ -40,6 +40,7 @@ defmodule ElixirSydney.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:timex, "~> 3.1"},
+     {:timex_ecto, "~> 3.1.1"},
      {:absinthe, "~> 1.3.0-beta"},
      {:absinthe_plug, "~> 1.3.0-beta"}]
   end
