@@ -1,6 +1,6 @@
 defmodule ElixirSydney.Web.PageController do
   use ElixirSydney.Web, :controller
-  alias ElixirSydney.Web.Meetup
+  alias ElixirSydney.Meetup
 
   def index(conn, _params) do
     render conn, "index.html",

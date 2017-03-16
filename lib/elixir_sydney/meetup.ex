@@ -1,7 +1,7 @@
-defmodule ElixirSydney.Web.Meetup do
+defmodule ElixirSydney.Meetup do
   defstruct [:title, :slug, :short_date, :long_date, :date, :location, :location_url, :description, :presenter_media, :url, :talks]
 
-  alias ElixirSydney.Web.{Meetup, Talk, Speaker}
+  alias ElixirSydney.{Meetup, Talk, Speaker}
 
   def next_meetup do
     hd all()
