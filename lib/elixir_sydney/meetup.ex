@@ -1,7 +1,7 @@
 defmodule ElixirSydney.Meetup do
   defstruct [:title, :slug, :date, :location, :location_url, :description, :presenter_media, :url, :talks]
 
-  alias ElixirSydney.{Meetup, Talk, Speaker}
+  alias ElixirSydney.{Meetup, Talk, Person}
 
   def next_meetup do
     hd all()
@@ -30,12 +30,12 @@ defmodule ElixirSydney.Meetup do
             description: """
             In this talk we will explore Nerves, the Elixir framework for building and deploying embedded software. Nerves is the easiest way to deploy Elixir to the Raspberry Pi or the Beaglebone.
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Andrew Harvey",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/5/a/3/e/member_224183102.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/11138446/",
               website_url: "",
-              twitter: "https://twitter.com/mootpointer/"
+              twitter: "@mootpointer"
             }
           },
           %Talk{
@@ -43,7 +43,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Phoenix 1.3 has just been released and there are lots of new changes. The project structure is significantly different and guide developers in the right direction for the best way to structure applications. We'll take a look at this and all the other cool new features.
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Josh Price",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
@@ -76,7 +76,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Need to secure your Phoenix or Plug application? Not sure how JWT works? Well there are lots of options in Elixir for adding security to your webapp. Sunil will introduce JWT and the various options for add Authentication to your app.
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Sunil Gopinath",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/c/2/d/a/member_115669882.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/43452202/",
@@ -92,7 +92,7 @@ defmodule ElixirSydney.Meetup do
             Josh will demystify writing recursive functions that are blazingly fast and help you avoid some of the traps.
             """,
             video_url: "https://www.youtube.com/watch?v=56Ui7nFg7WA",
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Josh Price",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
@@ -105,7 +105,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Elixir 1.4 introduces the new Process Registry module to help manage your processes in OTP. If you've attended our OTP introductory series then you'll be ready to join Martin as he shows us how we can use this in our Elixir OTP applications.
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Martin Stannard",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/1/7/c/c/member_251766092.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/83178992/",
@@ -139,7 +139,7 @@ defmodule ElixirSydney.Meetup do
             Want to know more about supervisors? Nick has got the talk for you.
             """,
             slide_url: "http://blog.ausimian.net/supervision-presentation/#/",
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Nick Gunn",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/s/img/2982428616572973604/noPhoto_80.gif",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/205821026/",
@@ -152,7 +152,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Ever wondered how to add type safety to Elixir code? Robin will show you how!
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Robin Hilliard",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/a/5/2/f/member_3822287.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/7114884/",
@@ -178,7 +178,7 @@ defmodule ElixirSydney.Meetup do
             title: "",
             description: """
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "",
               avatar_url: "",
               meetup_url: "",
@@ -190,7 +190,7 @@ defmodule ElixirSydney.Meetup do
             title: "",
             description: """
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "",
               avatar_url: "",
               meetup_url: "",
@@ -218,7 +218,7 @@ defmodule ElixirSydney.Meetup do
             title: "",
             description: """
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "",
               avatar_url: "",
               meetup_url: "",
@@ -230,7 +230,7 @@ defmodule ElixirSydney.Meetup do
             title: "",
             description: """
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "",
               avatar_url: "",
               meetup_url: "",
@@ -257,7 +257,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Elixir Syntax Basics
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Andrew Harvey",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/5/a/3/e/member_224183102.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/11138446/",
@@ -270,7 +270,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Pattern Matching
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "James Sadler",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/2/8/f/b/member_258850491.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/202221787/",
@@ -283,7 +283,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Intro to Plugs
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Josh Price",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
@@ -296,7 +296,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Intro to Phoenix
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Geoff Hodgson",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/d/e/2/8/member_138056872.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/105623792/",
@@ -309,7 +309,7 @@ defmodule ElixirSydney.Meetup do
             description: """
             Mix, ExUnit and Advanced Pattern Matching
             """,
-            speaker: %Speaker{
+            presenter: %Person{
               name: "Josh Price",
               avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
