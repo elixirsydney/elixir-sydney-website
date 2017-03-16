@@ -39,7 +39,8 @@ defmodule ElixirSydney.Mixfile do
      {:earmark, "~> 1.1"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:timex, "~> 3.1"}]
+     {:timex, "~> 3.1"},
+     {:absinthe, "~> 1.3.0-beta"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
