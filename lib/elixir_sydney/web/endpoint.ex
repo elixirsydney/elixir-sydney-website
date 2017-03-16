@@ -1,7 +1,7 @@
-defmodule ElixirSydney.Endpoint do
+defmodule ElixirSydney.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :elixir_sydney
 
-  socket "/socket", ElixirSydney.UserSocket
+  socket "/socket", ElixirSydney.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -38,5 +38,5 @@ defmodule ElixirSydney.Endpoint do
     key: "_elixir_sydney_key",
     signing_salt: "nUF4z+qJ"
 
-  plug ElixirSydney.Router
+  plug ElixirSydney.Web.Router
 end

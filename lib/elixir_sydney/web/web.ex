@@ -28,20 +28,20 @@ defmodule ElixirSydney.Web do
 
   def controller do
     quote do
-      use Phoenix.Controller
+      use Phoenix.Controller, namespace: ElixirSydney.Web
 
       alias ElixirSydney.Repo
       import Ecto
       import Ecto.Query
 
-      import ElixirSydney.Router.Helpers
-      import ElixirSydney.Gettext
+      import ElixirSydney.Web.Router.Helpers
+      import ElixirSydney.Web.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "web/templates"
+      use Phoenix.View, root: "lib/elixir_sydney/web/templates", namespace: ElixirSydney.Web
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
@@ -49,9 +49,9 @@ defmodule ElixirSydney.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import ElixirSydney.Router.Helpers
-      import ElixirSydney.ErrorHelpers
-      import ElixirSydney.Gettext
+      import ElixirSydney.Web.Router.Helpers
+      import ElixirSydney.Web.ErrorHelpers
+      import ElixirSydney.Web.Gettext
     end
   end
 
@@ -68,7 +68,7 @@ defmodule ElixirSydney.Web do
       alias ElixirSydney.Repo
       import Ecto
       import Ecto.Query
-      import ElixirSydney.Gettext
+      import ElixirSydney.Web.Gettext
     end
   end
 

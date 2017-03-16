@@ -1,4 +1,4 @@
-defmodule ElixirSydney.UserSocket do
+defmodule ElixirSydney.Web.UserSocket do
   use Phoenix.Socket
 
   ## Channels

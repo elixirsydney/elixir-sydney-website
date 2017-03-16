@@ -1,4 +1,4 @@
-defmodule ElixirSydney.PageView do
+defmodule ElixirSydney.Web.PageView do
   use ElixirSydney.Web, :view
 
   def markdown_to_html(markdown) do

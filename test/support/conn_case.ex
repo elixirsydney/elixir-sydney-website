@@ -1,4 +1,4 @@
-defmodule ElixirSydney.ConnCase do
+defmodule ElixirSydney.Web.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -25,10 +25,10 @@ defmodule ElixirSydney.ConnCase do
       import Ecto.Changeset
       import Ecto.Query
 
-      import ElixirSydney.Router.Helpers
+      import ElixirSydney.Web.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint ElixirSydney.Endpoint
+      @endpoint ElixirSydney.Web.Endpoint
     end
   end
 

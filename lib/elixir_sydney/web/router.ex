@@ -1,4 +1,4 @@
-defmodule ElixirSydney.Router do
+defmodule ElixirSydney.Web.Router do
   use ElixirSydney.Web, :router
 
   pipeline :browser do
@@ -13,7 +13,7 @@ defmodule ElixirSydney.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ElixirSydney do
+  scope "/", ElixirSydney.Web do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index

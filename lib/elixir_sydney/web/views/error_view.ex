@@ -1,4 +1,4 @@
-defmodule ElixirSydney.ErrorView do
+defmodule ElixirSydney.Web.ErrorView do
   use ElixirSydney.Web, :view
 
   def render("404.html", _assigns) do

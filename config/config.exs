@@ -10,10 +10,10 @@ use Mix.Config
 #   ecto_repos: [ElixirSydney.Repo]
 
 # Configures the endpoint
-config :elixir_sydney, ElixirSydney.Endpoint,
+config :elixir_sydney, ElixirSydney.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "fBlFB6+IhpNM2yNUQNpxVmUvv/Q80zxyypcZlkyqNi+cFAP0sDHsarayilJXWlBc",
-  render_errors: [view: ElixirSydney.ErrorView, accepts: ~w(html json)],
+  render_errors: [view: ElixirSydney.Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: ElixirSydney.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

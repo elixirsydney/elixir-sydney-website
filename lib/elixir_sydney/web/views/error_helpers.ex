@@ -1,4 +1,4 @@
-defmodule ElixirSydney.ErrorHelpers do
+defmodule ElixirSydney.Web.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule ElixirSydney.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(ElixirSydney.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(ElixirSydney.Web.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(ElixirSydney.Gettext, "errors", msg, opts)
+      Gettext.dgettext(ElixirSydney.Web.Gettext, "errors", msg, opts)
     end
   end
 end
