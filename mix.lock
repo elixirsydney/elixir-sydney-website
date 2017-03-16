@@ -1,4 +1,5 @@
 %{"absinthe": {:hex, :absinthe, "1.3.0-beta.1", "a5d29ccd91396567b60fb4f762d1ab3ab3d5f923b3bf916dc9b5da68ce8a3ea4", [:mix], []},
+  "absinthe_plug": {:hex, :absinthe_plug, "1.3.0-beta.0", "9be185d6967bdb5b0a44dcde4efcf06dd0d72cd18ec2692f20187a3d01849e6a", [:mix], [{:absinthe, "~> 1.3.0-beta.0", [hex: :absinthe, optional: false]}, {:plug, "~> 1.3.2 or ~> 1.4", [hex: :plug, optional: false]}]},
   "certifi": {:hex, :certifi, "1.0.0", "1c787a85b1855ba354f0b8920392c19aa1d06b0ee1362f9141279620a5be2039", [:rebar3], []},
   "combine": {:hex, :combine, "0.9.6", "8d1034a127d4cbf6924c8a5010d3534d958085575fa4d9b878f200d79ac78335", [:mix], []},
   "connection": {:hex, :connection, "1.0.4", "a1cae72211f0eef17705aaededacac3eb30e6625b04a6117c1b2db6ace7d5976", [:mix], []},

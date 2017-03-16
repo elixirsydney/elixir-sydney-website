@@ -10,7 +10,9 @@ defmodule ElixirSydney.Web.Router do
   end
 
   pipeline :api do
-    plug :accepts, ["json"]
+    plug Plug.Parsers,
+      parsers: [:urlencoded, :multipart, :json, Absinthe.Plug.Parser],
+      json_decoder: Poison
   end
 
   scope "/", ElixirSydney.Web do
@@ -24,7 +26,17 @@ defmodule ElixirSydney.Web.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ElixirSydney do
-  #   pipe_through :api
-  # end
+  scope "/graphql" do
+    pipe_through :api
+
+    forward "/", Absinthe.Plug,
+      schema: ElixirSydney.GraphQL.Schema
+  end
+
+  scope "/graphiql" do
+    pipe_through :api
+
+    forward "/", Absinthe.Plug.GraphiQL,
+      schema: ElixirSydney.GraphQL.Schema
+  end
 end
