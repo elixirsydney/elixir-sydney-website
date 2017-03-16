@@ -38,7 +38,8 @@ defmodule ElixirSydney.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:earmark, "~> 1.1"},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:timex, "~> 3.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

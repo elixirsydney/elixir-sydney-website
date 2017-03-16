@@ -9,7 +9,7 @@
             <div class="timeline-item-node"></div>
             <%= link to: page_path(@conn, :meetup, meetup.slug), class: "timeline-item-inner" do %>
               <h6 class="text-caps text-danger">
-                <%= meetup.short_date %>
+                <%= short_date(meetup.date) %>
               </h6>
               <h4>
                 <%= meetup.title %>

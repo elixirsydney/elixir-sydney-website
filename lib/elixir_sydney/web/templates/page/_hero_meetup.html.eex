@@ -7,7 +7,7 @@
         <%= @meetup.title %>
       </h1>
       <p class="byline">
-        <strong><%= @meetup.long_date %></strong>
+        <strong><%= long_date(@meetup.date) %></strong>
       </p>
       <p class="byline">
         <%= @meetup.location %>

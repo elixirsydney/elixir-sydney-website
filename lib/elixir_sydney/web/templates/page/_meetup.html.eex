@@ -1,5 +1,5 @@
 <div class="meetup-calendar calendar hidden-xs hidden-sm <%= @past && "calendar--past" %>">
-  <div class="calendar__header"><%= @meetup.date.month %></div>
+  <div class="calendar__header"><%= short_month(@meetup.date) %></div>
   <div class="calendar__body">
     <div class="calendar__date"><%= @meetup.date.day %></div>
     <div class="calendar__year"><%= @meetup.date.year %></div>
@@ -7,7 +7,7 @@
 </div>
 <div class="meetup-content">
   <h2 class="mv-5"><%= @meetup.title %></h2>
-  <h5 class="mb-1"><%= @meetup.long_date %></h5>
+  <h5 class="mb-1"><%= long_date(@meetup.date) %></h5>
   <p><%= markdown_to_html @meetup.description %></p>
 
   <hr class="mv-2">

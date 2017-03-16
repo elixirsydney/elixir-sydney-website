@@ -1,5 +1,5 @@
 defmodule ElixirSydney.Meetup do
-  defstruct [:title, :slug, :short_date, :long_date, :date, :location, :location_url, :description, :presenter_media, :url, :talks]
+  defstruct [:title, :slug, :date, :location, :location_url, :description, :presenter_media, :url, :talks]
 
   alias ElixirSydney.{Meetup, Talk, Speaker}
 
@@ -16,9 +16,7 @@ defmodule ElixirSydney.Meetup do
       %Meetup{
         title: "🔥 Phoenix, Ecto and Nerves",
         slug: "phoenix-ecto-and-nerves",
-        date: ~D[2016-04-05],
-        short_date: "April 2017",
-        long_date: "Wednesday 5th, April 2017, 6:00pm - 8:30pm",
+        date: ~D[2017-04-05],
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """
@@ -59,8 +57,6 @@ defmodule ElixirSydney.Meetup do
         title: "Authentication, Recursion and Registries",
         slug: "authentication-recursion-and-registries",
         date: ~D[2017-03-01],
-        long_date: "Wednesday 1st, March 2017, 6:00pm - 8:30pm",
-        short_date: "March 2017",
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """
@@ -123,8 +119,6 @@ defmodule ElixirSydney.Meetup do
         title: "Sydney Elixir Meetup",
         slug: "sydney-elixir-meetup",
         date: ~D[2017-02-01],
-        short_date: "February 2017",
-        long_date: "Wednesday 1st, February 2017, 6:00pm - 8:30pm",
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """
@@ -172,8 +166,6 @@ defmodule ElixirSydney.Meetup do
         title: "The OTP Edition",
         slug: "the-otp-edition",
         date: ~D[2016-12-07],
-        short_date: "December 2016",
-        long_date: "Wednesday 7th, December 2016, 6:00pm - 8:30pm",
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """
@@ -212,8 +204,6 @@ defmodule ElixirSydney.Meetup do
         title: "Back to Basics Part 2",
         slug: "back-to-basics-part-2",
         date: ~D[2016-11-02],
-        short_date: "November 2016",
-        long_date: "Wednesday 2nd, November 2016, 6:00pm - 8:30pm",
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """
@@ -254,8 +244,6 @@ defmodule ElixirSydney.Meetup do
         title: "Back to Basics Part 1",
         slug: "back-to-basics-part-1",
         date: ~D[2016-10-05],
-        short_date: "October 2016",
-        long_date: "Wednesday 5th, October 2016, 6:00pm - 8:30pm",
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """
