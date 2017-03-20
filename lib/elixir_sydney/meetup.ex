@@ -8,7 +8,7 @@ defmodule ElixirSydney.Meetup do
     field :slug, :string
     field :description, :string
     field :url, :string
-    field :date, Timex.Ecto.DateTimeWithTimezone
+    field :date, Timex.Ecto.Date
 
     belongs_to :location, ElixirSydney.Location
     has_many :talks, ElixirSydney.Talk

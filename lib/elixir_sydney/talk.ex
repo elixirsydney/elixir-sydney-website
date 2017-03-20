@@ -9,5 +9,6 @@ defmodule ElixirSydney.Talk do
     field :video_url, :string
 
     belongs_to :presenter, ElixirSydney.Person
+    belongs_to :meetup, ElixirSydney.Meetup
   end
 end
