@@ -56,3 +56,12 @@ config :logger, level: :info
 #
 #     config :elixir_sydney, ElixirSydney.Endpoint, server: true
 #
+
+# Configure your database
+config :elixir_sydney, ElixirSydney.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "elixir_sydney_dev",
+  hostname: "localhost",
+  pool_size: 10
