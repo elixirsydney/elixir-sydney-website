@@ -20,7 +20,13 @@ defmodule ElixirSydney.Meetup do
         location: "Pivotal Labs, Level 11, 155 Clarence Street",
         location_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919",
         description: """
-        With the new updates to Phoenix 1.3 and Ecto 2.1, we will take another look at the things we can do with Phoenix and Ecto. We will also discuss Nerves which allows the building of embedded software for RaspberryPis in Elixir.
+        With the new updates to <strong>Phoenix 1.3</strong> and <strong>Ecto 2.1</strong>, we will take another look at the things we can do with Phoenix and Ecto.
+
+        We will also show you some fun things you can do with <strong>Nerves</strong>, which lets you build embedded software for RaspberryPis in Elixir.
+
+        See you there!
+
+        Josh, Andrew and James
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/238021480/",
         presenter_media: "",
@@ -49,6 +55,19 @@ defmodule ElixirSydney.Meetup do
               meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
               website_url: "",
               twitter: "@joshprice"
+            }
+          },
+          %Talk{
+            title: "Ecto 2.1 Tip and Tricks",
+            description: """
+            If you want to talk to a datastore, you're going to want to make friends with Ecto. It lets you compose query fragments with ease, and takes advantage of powerful Postgres features like Upserts. We'll do a quick intro, and then take a deeper look at these new features.
+            """,
+            presenter: %Person{
+              name: "James Sadler",
+              avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/2/8/f/b/highres_258850491.jpeg",
+              meetup_url: "https://www.meetup.com/sydney-ex/members/202221787/",
+              website_url: "",
+              twitter: "@freshtonic"
             }
           }
         ]
