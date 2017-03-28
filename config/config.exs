@@ -7,6 +7,7 @@ use Mix.Config
 
 # General application configuration
 config :elixir_sydney,
+  adapter: Ecto.Adapters.Postgres,
   ecto_repos: []
   # ecto_repos: [ElixirSydney.Repo]
 
