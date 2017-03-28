@@ -6,8 +6,8 @@
 use Mix.Config
 
 # General application configuration
-config :elixir_sydney,
-  ecto_repos: []
+# config :elixir_sydney,
+#   ecto_repos: []
   # ecto_repos: [ElixirSydney.Repo]
 
 # Configures the endpoint
