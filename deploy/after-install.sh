@@ -2,8 +2,9 @@
 set -e
 
 # Find out from CodeDeploy what environment we are in by parsing the APPLICATION_NAME
-ENVIRONMENT=`echo "$APPLICATION_NAME" | cut -d '-' -f 1`
+ENVIRONMENT=`echo "$APPLICATION_NAME" | cut -d '-' -f 1 | tr A-Z a-z`
 # Put the environment in the log
+echo "APPLICATION_NAME is $APPLICATION_NAME"
 echo "Customizing environment: $ENVIRONMENT"
 
 # Setup variables depending on what environment
