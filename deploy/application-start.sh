@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo start monica-app
+sudo start elixir-sydney-app

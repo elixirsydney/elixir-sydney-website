@@ -11,7 +11,7 @@ cd /opt/elixir-sydney/codedeploy
 # Pull in secrets from S3 Bucket
 aws --region=ap-southeast-2 s3 cp s3://$S3/prod.secret.exs /opt/elixir-sydney/codedeploy/config/prod.secret.exs
 
-cp /opt/elixir-sydney/codedeploy/deploy/monica-app-upstart.conf /etc/init/monica-app.conf
+cp /opt/elixir-sydney/codedeploy/deploy/elixir-sydney-app-upstart.conf /etc/init/elixir-sydney-app.conf
 
 export HOME=/root
 mix local.hex --force
