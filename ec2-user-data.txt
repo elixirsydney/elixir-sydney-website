@@ -1,4 +1,6 @@
-#!/bin/bash -ex
+#!/bin/bash
+
+set -v -e -x
 
 apt-get -y update
 apt-get -y install awscli
