@@ -3,6 +3,13 @@
 apt-get -y update
 apt-get -y install awscli
 apt-get -y install ruby2.0
+
+# Install Erlang & Elixir runtimes
+wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && dpkg -i erlang-solutions_1.0_all.deb
+apt-get -y update
+apt-get -y install esl-erlang
+apt-get -y install elixir
+
 cd /home/ubuntu
 aws s3 cp s3://aws-codedeploy-ap-southeast-2/latest/install . --region ap-southeast-2
 chmod +x ./install
