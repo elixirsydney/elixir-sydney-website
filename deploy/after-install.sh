@@ -9,7 +9,7 @@ SOURCE_DIR=/opt/elixir-sydney/codedeploy/deploy
 cd /opt/elixir-sydney/codedeploy
 
 # Pull in secrets from S3 Bucket
-aws --region=ap-southeast-2 s3 cp s3://sydney-elixir-config/prod.secret.exs /opt/elixir-sydney/codedeploy/config/prod.secret.exs
+aws --region=ap-southeast-2 s3 cp s3://elixir-sydney-prod-config/prod.secret.exs /opt/elixir-sydney/codedeploy/config/prod.secret.exs
 
 cp /opt/elixir-sydney/codedeploy/deploy/elixir-sydney-app-upstart.conf /etc/init/elixir-sydney-app.conf
 
