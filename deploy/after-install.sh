@@ -1,31 +1,7 @@
 #!/bin/bash
 set -e
 
-# Find out from CodeDeploy what environment we are in by parsing the APPLICATION_NAME
-ENVIRONMENT=`echo "$APPLICATION_NAME" | cut -d '-' -f 1 | tr A-Z a-z`
-# Put the environment in the log
-echo "APPLICATION_NAME is $APPLICATION_NAME"
-echo "Customizing environment: $ENVIRONMENT"
-
-# Setup variables depending on what environment
-case $ENVIRONMENT in
-    blue)
-        S3=monica-blue
-        export MIX_ENV=blue
-    ;;
-    red)
-        S3=monica-red
-        export MIX_ENV=red
-    ;;
-    production)
-        S3=monica-production
-        export MIX_ENV=prod
-    ;;
-    *)
-        echo "Error: undefined environment: $ENVIRONMENT"
-        exit 1
-    ;;
-esac
+export MIX_ENV=prod
 
 SOURCE_DIR=/opt/elixir-sydney/codedeploy/deploy
 
@@ -33,10 +9,9 @@ SOURCE_DIR=/opt/elixir-sydney/codedeploy/deploy
 cd /opt/elixir-sydney/codedeploy
 
 # Pull in secrets from S3 Bucket
-aws --region=us-east-1 s3 cp s3://$S3/$ENVIRONMENT.secret.exs /opt/elixir-sydney/codedeploy/config/$MIX_ENV.secret.exs
+aws --region=ap-southeast-2 s3 cp s3://$S3/prod.secret.exs /opt/elixir-sydney/codedeploy/config/prod.secret.exs
 
-# Copy over the upstart script and set MIX_ENV correctly
-sed "s/MIX_ENV_VALUE/$MIX_ENV/"  /opt/elixir-sydney/codedeploy/deploy/monica-app-upstart.conf >/etc/init/monica-app.conf
+cp /opt/elixir-sydney/codedeploy/deploy/monica-app-upstart.conf /etc/init/monica-app.conf
 
 export HOME=/root
 mix local.hex --force
