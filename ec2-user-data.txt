@@ -1,18 +1,57 @@
 #!/bin/bash
 
-set -v -e -x
+# This is an EC2 user data script for bringing up an instance with
+# Erlang 19.3 and Elixir 1.4.2.
+#
+# As with any user-data script, its progress can be observed by
+# SSHing into the instance and tailing /var/log/cloud-init-output.log
+#
 
-apt-get -y update
-apt-get -y install awscli
-apt-get -y install ruby2.0
+# Enable verbose shell logging and abort on any error.
+set -e -x -v
 
-# Install Erlang & Elixir runtimes
-wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && dpkg -i erlang-solutions_1.0_all.deb
-apt-get -y update
-apt-get -y install esl-erlang
-apt-get -y install elixir
+# The Erlang compilation will fail without this being set.
+# Because this script runs on boot, there is no HOME env var set.
+export HOME=/root
+export PATH=$PATH:/usr/local/bin
 
-cd /home/ubuntu
-aws s3 cp s3://aws-codedeploy-ap-southeast-2/latest/install . --region ap-southeast-2
-chmod +x ./install
-./install auto
+function report_error {
+	echo "FINISHED WITH ERROR"
+}
+
+function finished {
+	if [ $? -eq 0 ]; then
+		echo "FINISHED SUCCESSFULLY"
+	fi
+}
+
+# Trap EXIT and ERR and log appropriate error messages.
+trap report_error ERR
+trap finished EXIT
+ 
+yum -y update aws-cfn-bootstrap
+yum -y install aws-cli
+
+# erlang deps
+yum -y groupinstall "Development Tools"
+yum -y install ncurses-devel openssl-devel
+
+cd /tmp
+
+# Install Erlang
+wget http://www.erlang.org/download/otp_src_19.3.tar.gz
+tar -zxvf otp_src_19.3.tar.gz
+cd otp_src_19.3/
+./configure
+make
+make install
+
+cd /tmp
+
+# Install Elixir
+wget https://github.com/elixir-lang/elixir/archive/v1.4.2.zip
+unzip v1.4.2.zip
+cd elixir-1.4.2/
+make
+make install
+
