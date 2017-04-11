@@ -56,3 +56,5 @@ config :logger, level: :info
 #
 #     config :elixir_sydney, ElixirSydney.Endpoint, server: true
 #
+
+import_config "prod_database.secret.exs"
