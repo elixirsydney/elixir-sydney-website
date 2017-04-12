@@ -82,7 +82,7 @@ defmodule Seeds do
       }
     )
 
-    james_sadlier = Repo.insert!(
+    james_sadler = Repo.insert!(
       %Person{
         name: "James Sadler",
         avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/2/8/f/b/member_258850491.jpeg",
@@ -115,6 +115,7 @@ defmodule Seeds do
         talks: [
           %Talk{
             title: "Functional Firmware with Nerves",
+            slug: "functional-firmware-with-nerves",
             description: """
             In this talk we will explore Nerves, the Elixir framework for building and deploying embedded software. Nerves is the easiest way to deploy Elixir to the Raspberry Pi or the Beaglebone.
             """,
@@ -122,10 +123,19 @@ defmodule Seeds do
           },
           %Talk{
             title: "What's New in Phoenix 1.3",
+            slug: "whats-new-in-phoenix-1-3",
             description: """
             Phoenix 1.3 has just been released and there are lots of new changes. The project structure is significantly different and guide developers in the right direction for the best way to structure applications. We'll take a look at this and all the other cool new features.
             """,
             presenter: josh_price
+          },
+          %Talk{
+            title: "Ecto 2.1 Tips and Tricks",
+            slug: "ecto-2-1-tips-and-tricks",
+            description: """
+            If you want to talk to a datastore, you’re going to want to make friends with Ecto. It lets you compose query fragments with ease, and takes advantage of powerful Postgres features like Upserts. We’ll do a quick intro, and then take a deeper look at these new features.
+            """,
+            presenter: james_sadler
           }
         ]
       },
@@ -144,6 +154,7 @@ defmodule Seeds do
         talks: [
           %Talk{
             title: "Authentication with JWT",
+            slug: "authentication-with-jwt",
             description: """
             Need to secure your Phoenix or Plug application? Not sure how JWT works? Well there are lots of options in Elixir for adding security to your webapp. Sunil will introduce JWT and the various options for add Authentication to your app.
             """,
@@ -151,6 +162,7 @@ defmodule Seeds do
           },
           %Talk{
             title: "Getting Comfortable With Recursion",
+            slug: "getting-comfortable-with-recursion",
             description: """
             You might not be used to writing code in a recursive style if you're coming from a more imperative language. Heard of Tail Recursion or Tail Call Optimisation, but not sure what it really means?
             Josh will demystify writing recursive functions that are blazingly fast and help you avoid some of the traps.
@@ -160,6 +172,7 @@ defmodule Seeds do
           },
           %Talk{
             title: "Using the New Registry in Elixir 1.4",
+            slug: "using-the-new-registry-in-elixir-1-4",
             description: """
             Elixir 1.4 introduces the new Process Registry module to help manage your processes in OTP. If you've attended our OTP introductory series then you'll be ready to join Martin as he shows us how we can use this in our Elixir OTP applications.
             """,
@@ -182,6 +195,7 @@ defmodule Seeds do
         talks: [
           %Talk{
             title: "Introduction to Supervisors",
+            slug: "introduction-to-supervisors",
             description: """
             Want to know more about supervisors? Nick has got the talk for you.
             """,
@@ -190,6 +204,7 @@ defmodule Seeds do
           },
           %Talk{
             title: "Adventures in Dialyzer with Defunit",
+            slug: "adventures-in-dialyzer-with-defunit",
             description: """
             Ever wondered how to add type safety to Elixir code? Robin will show you how!
             """,
@@ -206,32 +221,7 @@ defmodule Seeds do
         We'll be covering OTP from the beginning in the last meetup for the year.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/235288631/",
-        talks: [
-          %Talk{
-            title: "",
-            description: """
-            """,
-            presenter: %Person{
-              name: "",
-              avatar_url: "",
-              meetup_url: "",
-              website_url: "",
-              twitter: ""
-            }
-          },
-          %Talk{
-            title: "",
-            description: """
-            """,
-            presenter: %Person{
-              name: "",
-              avatar_url: "",
-              meetup_url: "",
-              website_url: "",
-              twitter: ""
-            }
-          }
-        ]
+        talks: []
       },
       %Meetup{
         title: "Back to Basics Part 2",
@@ -243,32 +233,7 @@ defmodule Seeds do
         We'll be looking at some more practical exercises and tackling them as a group and also in pairs.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/234729669/",
-        talks: [
-          %Talk{
-            title: "",
-            description: """
-            """,
-            presenter: %Person{
-              name: "",
-              avatar_url: "",
-              meetup_url: "",
-              website_url: "",
-              twitter: ""
-            }
-          },
-          %Talk{
-            title: "",
-            description: """
-            """,
-            presenter: %Person{
-              name: "",
-              avatar_url: "",
-              meetup_url: "",
-              website_url: "",
-              twitter: ""
-            }
-          }
-        ]
+        talks: []
       },
       %Meetup{
         title: "Back to Basics Part 1",
@@ -282,6 +247,7 @@ defmodule Seeds do
         talks: [
           %Talk{
             title: "Elixir Syntax Basics",
+            slug: "elixir-syntax-basics",
             description: """
             Elixir Syntax Basics
             """,
@@ -289,13 +255,15 @@ defmodule Seeds do
           },
           %Talk{
             title: "Pattern Matching",
+            slug: "pattern-matching",
             description: """
             Pattern Matching
             """,
-            presenter: james_sadlier
+            presenter: james_sadler
           },
           %Talk{
             title: "Intro to Plugs",
+            slug: "intro-to-plugs",
             description: """
             Intro to Plugs
             """,
@@ -303,6 +271,7 @@ defmodule Seeds do
           },
           %Talk{
             title: "Intro to Phoenix",
+            slug: "intro-to-phoenix",
             description: """
             Intro to Phoenix
             """,
@@ -310,6 +279,7 @@ defmodule Seeds do
           },
           %Talk{
             title: "Mix, ExUnit and Advanced Pattern Matching",
+            slug: "mix-exunit-and-advanced-pattern-matching",
             description: """
             Mix, ExUnit and Advanced Pattern Matching
             """,

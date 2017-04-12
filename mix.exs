@@ -39,6 +39,7 @@ defmodule ElixirSydney.Mixfile do
      {:earmark, "~> 1.1"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
+     {:slugger, "~> 0.1"},
      {:timex, "~> 3.1"},
      {:timex_ecto, "~> 3.1.1"},
      {:absinthe, "~> 1.3.0-beta"},

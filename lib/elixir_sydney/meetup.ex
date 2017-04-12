@@ -1,7 +1,7 @@
 defmodule ElixirSydney.Meetup do
   use ElixirSydney, :model
 
-  alias ElixirSydney.{Meetup, Talk, Person, Location}
+  alias ElixirSydney.{Meetup, Talk, Person, Repo, Location}
 
   schema "meetup" do
     field :title, :string
@@ -15,7 +15,13 @@ defmodule ElixirSydney.Meetup do
   end
 
   def next_meetup do
-    # hd all()
+    Meetup
+    # |> where([m], m.date > ^Date.utc_today)
+    |> order_by(asc: :date)
+    |> last
+    |> preload(:location)
+    |> preload(talks: :presenter)
+    |> Repo.one!
   end
 
   def past_meetups do

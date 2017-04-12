@@ -10,9 +10,9 @@
         <strong><%= long_date(@meetup.date) %>, 6:00 - 8:30pm</strong>
       </p>
       <p class="byline">
-        <%= @meetup.location %>
+        <%= @meetup.location.name %>
         &mdash;
-        <%= link "Directions", to: @meetup.location_url, target: "_blank" %>
+        <%= link "Directions", to: @meetup.location.map_url, target: "_blank" %>
       </p>
     </div>
     <div id="react-hero-button">
