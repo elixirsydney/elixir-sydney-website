@@ -102,6 +102,26 @@ defmodule Seeds do
     }
     )
 
+    alex_tsirel = Repo.insert!(
+    %Person{
+      name: "Alex Tsirel",
+      avatar_url: "https://secure.meetupstatic.com/photos/member/1/b/c/8/member_126127112.jpeg",
+      meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98555692/",
+      website_url: "",
+      twitter: ""
+    }
+    )
+
+    alan_milligan = Repo.insert!(
+    %Person{
+      name: "Alan Milligan",
+      avatar_url: "https://secure.meetupstatic.com/photos/member/a/1/b/0/highres_209981392.jpeg",
+      meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/13064111/",
+      website_url: "",
+      twitter: "@bastionlinux"
+    }
+    )
+
     raw_meetups = [
       %Meetup{
         title: "🔥 Phoenix, Ecto and Nerves",
@@ -176,6 +196,7 @@ defmodule Seeds do
             description: """
             Elixir 1.4 introduces the new Process Registry module to help manage your processes in OTP. If you've attended our OTP introductory series then you'll be ready to join Martin as he shows us how we can use this in our Elixir OTP applications.
             """,
+            video_url: "https://www.youtube.com/watch?v=56Ui7nFg7WA",
             presenter: martin_stannard
           }
         ]
@@ -208,6 +229,7 @@ defmodule Seeds do
             description: """
             Ever wondered how to add type safety to Elixir code? Robin will show you how!
             """,
+            slide_url: "https://github.com/robinhilliard/defunit_syd_elixir",
             presenter: robin_hilliard
           }
         ]
@@ -284,6 +306,109 @@ defmodule Seeds do
             Mix, ExUnit and Advanced Pattern Matching
             """,
             presenter: josh_price
+          },
+          %Meetup{
+            title: "August Meetup",
+            slug: "august-meetup",
+            date: ~D[2016-08-03],
+            location: pivotal_office,
+            description: """
+            Thanks to Pivotal Labs for hosting, we'll be road testing the slightly cosier board room this month.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/232740340/",
+            talks: [
+              %Talk{
+                title: "Better APIs with GraphQL",
+                slug: "better-apis-with-graphql",
+                description: """
+                Making better APIs with GraphQL
+                """,
+                slide_url: "",
+                presenter: josh_price
+              },
+              %Talk{
+                title: "Migrating an App from Ruby to Elixir",
+                slug: "migrating-an-app-from-ruby-to-elixir",
+                description: """
+                How to migrate your Ruby App into Elixir
+                """,
+                presenter: alex_tsirel
+              }
+            ]
+          },
+          %Meetup{
+            title: "July Meetup",
+            slug: "july-meetup",
+            date: ~D[2016-07-06],
+            location: pivotal_office,
+            description: """
+            We're back at Pivotal Labs again this month, they're central and food/drinks will be provided.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/231582443/",
+            talks: [
+              %Talk{
+                title: "A Gentle introduction to the Erlang Ecosystem",
+                slug: "a-gentle-introduction-to-the-erlang-ecosystem",
+                description: """
+                """,
+                slide_url: "",
+                presenter: alan_milligan
+              },
+              %Talk{
+                title: "Hassle free deployment with EXRM and edeliver",
+                slug: "hassle-free-deployment-with-exrm-and-edliver",
+                description: """
+                """,
+                presenter: alex_tsirel
+              },
+              %Talk{
+                title: "Discussion of all the new things",
+                slug: "discussion-of-all-the-new-things",
+                description: """
+                Elixir 1.3, Ecto 2.0 and Phoenix 1.2
+                """,
+                presenter: andrew_harvey
+              }
+            ]
+          },
+          %Meetup{
+            title: "June Meetup",
+            slug: "june-meetup",
+            date: ~D[2016-06-01],
+            location: pivotal_office,
+            description: """
+            New Venue
+
+            We've moved to Pivotal Labs, they're nice and central and pizza will still be provided.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/230868144/",
+            talks: [
+              %Talk{
+                title: "ElixirConf EU part 1",
+                slug: "elixirconf-eu-part-1",
+                description: """
+                Sharing from ElixirConf EU
+                """,
+                slide_url: "",
+                presenter: josh_price
+              },
+              %Talk{
+                title: "ElixirConf EU part 2",
+                slug: "elixirconf-eu-part-2",
+                description: """
+                Sharing from ElixirConf EU
+                """,
+                presenter: james_sadler
+              },
+              %Talk{
+                title: "Getting PG2 working on AWS",
+                slug: "getting-pg2-working-on-aws",
+                description: """
+                A lightning talk on getting PG2 (how Phoenix talks between nodes for PubSub) working on AWS
+                """,
+                presenter: andrew_harvey
+              }
+            ]
           }
         ]
       }

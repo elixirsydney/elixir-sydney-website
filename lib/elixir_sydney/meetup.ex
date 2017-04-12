@@ -16,15 +16,18 @@ defmodule ElixirSydney.Meetup do
 
   def next_meetup do
     Meetup
-    # |> where([m], m.date > ^Date.utc_today)
-    |> order_by(asc: :date)
-    |> last
+    |> order_by(desc: :date)
+    |> first
     |> preload(:location)
     |> preload(talks: :presenter)
-    |> Repo.one!
+    |> Repo.one
   end
 
   def past_meetups do
-    # tl all()
+    Meetup
+    |> where([m], m.date < ^Date.utc_today)
+    |> order_by(desc: :date)
+    |> preload(talks: :presenter)
+    |> Repo.all
   end
 end
