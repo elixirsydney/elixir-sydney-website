@@ -122,6 +122,16 @@ defmodule Seeds do
     }
     )
 
+    garret_heinlen = Repo.insert!(
+    %Person{
+      name: "Garret Heinlen",
+      avatar_url: "https://secure.meetupstatic.com/photos/member/b/7/a/4/member_184907012.jpeg",
+      meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98723842/",
+      website_url: "",
+      twitter: "@gogogarrett"
+    }
+    )
+
     raw_meetups = [
       %Meetup{
         title: "🔥 Phoenix, Ecto and Nerves",
@@ -147,6 +157,7 @@ defmodule Seeds do
             description: """
             Phoenix 1.3 has just been released and there are lots of new changes. The project structure is significantly different and guide developers in the right direction for the best way to structure applications. We'll take a look at this and all the other cool new features.
             """,
+            slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/tree/master/meetups/2017-04/whats_new_in_phoenix_1.3-josh_price",
             presenter: josh_price
           },
           %Talk{
@@ -178,6 +189,7 @@ defmodule Seeds do
             description: """
             Need to secure your Phoenix or Plug application? Not sure how JWT works? Well there are lots of options in Elixir for adding security to your webapp. Sunil will introduce JWT and the various options for add Authentication to your app.
             """,
+            slide_url: "https://github.com/sunilgopinath/joken_plug",
             presenter: sunil_gopinath
           },
           %Talk{
@@ -187,6 +199,7 @@ defmodule Seeds do
             You might not be used to writing code in a recursive style if you're coming from a more imperative language. Heard of Tail Recursion or Tail Call Optimisation, but not sure what it really means?
             Josh will demystify writing recursive functions that are blazingly fast and help you avoid some of the traps.
             """,
+            slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/blob/master/meetups/2017-03/the_elixir_way-josh_price/idiomatic_performant-elixir-josh_price.md",
             video_url: "https://www.youtube.com/watch?v=56Ui7nFg7WA",
             presenter: josh_price
           },
@@ -243,7 +256,26 @@ defmodule Seeds do
         We'll be covering OTP from the beginning in the last meetup for the year.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/235288631/",
-        talks: []
+        talks: [
+          %Talk{
+            title: "Intro to Processes and the Actor model",
+            slug: "intro-to-processes-and-the-actor-model",
+            description: """
+            A Quick intro into Processes and the Actor model
+            """,
+            slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/blob/master/meetups/2016-12/intro_to_processes_actor_model-josh_price/intro_to_processes_actor_model.md",
+            presenter: josh_price
+          },
+          %Talk{
+            title: "Serving Generally",
+            slug: "serving-generally",
+            description: """
+            A Primer into GenServers
+            """,
+            slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/tree/master/meetups/2016-12/presentations/serving_generally-garrett_heinlen",
+            presenter: garret_heinlen
+          }
+        ]
       },
       %Meetup{
         title: "Back to Basics Part 2",
@@ -289,6 +321,7 @@ defmodule Seeds do
             description: """
             Intro to Plugs
             """,
+            slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/tree/master/meetups/2016-10/intro_to_plugs-josh_price",
             presenter: josh_price
           },
           %Talk{
@@ -323,7 +356,7 @@ defmodule Seeds do
                 description: """
                 Making better APIs with GraphQL
                 """,
-                slide_url: "",
+                slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/tree/master/meetups/2016-08/better_apis_with_graphql-josh_price",
                 presenter: josh_price
               },
               %Talk{
@@ -351,7 +384,6 @@ defmodule Seeds do
                 slug: "a-gentle-introduction-to-the-erlang-ecosystem",
                 description: """
                 """,
-                slide_url: "",
                 presenter: alan_milligan
               },
               %Talk{
@@ -389,7 +421,7 @@ defmodule Seeds do
                 description: """
                 Sharing from ElixirConf EU
                 """,
-                slide_url: "",
+                slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/tree/master/meetups/2016-06/elixirconfeu-empex-recap-josh_price_and_james_sadler",
                 presenter: josh_price
               },
               %Talk{
@@ -406,6 +438,7 @@ defmodule Seeds do
                 description: """
                 A lightning talk on getting PG2 (how Phoenix talks between nodes for PubSub) working on AWS
                 """,
+                slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/tree/master/meetups/2016-06/pg2_in_action-andrew_harvey",
                 presenter: andrew_harvey
               }
             ]
