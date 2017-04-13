@@ -1,6 +1,6 @@
 defmodule ElixirSydney.GraphQL.Schema do
   use Absinthe.Schema
-  alias ElixirSydney.Meetup
+  alias ElixirSydney.Events
 
   import_types Absinthe.Type.Custom
 
@@ -8,14 +8,14 @@ defmodule ElixirSydney.GraphQL.Schema do
     @desc "Get the next meetup"
     field :next_meetup, type: :meetup do
       resolve fn _, _ ->
-        {:ok, Meetup.next_meetup}
+        {:ok, Events.next_meetup}
       end
     end
 
     @desc "Get the previous meetups"
     field :previous_meetups, type: list_of(:meetup) do
       resolve fn _, _ ->
-        {:ok, Meetup.past_meetups}
+        {:ok, Events.past_meetups}
       end
     end
   end

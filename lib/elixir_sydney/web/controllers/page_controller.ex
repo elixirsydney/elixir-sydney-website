@@ -1,10 +1,10 @@
 defmodule ElixirSydney.Web.PageController do
   use ElixirSydney.Web, :controller
-  alias ElixirSydney.Meetup
+  alias ElixirSydney.Events
 
   def index(conn, _params) do
     render conn, "index.html",
-      meetup: Meetup.next_meetup,
+      meetup: Events.next_meetup,
       page_name: "home"
   end
 
@@ -15,14 +15,14 @@ defmodule ElixirSydney.Web.PageController do
 
   def meetups(conn, _params) do
     render conn, "meetups.html",
-      next_meetup: Meetup.next_meetup,
-      past_meetups: Meetup.past_meetups,
+      next_meetup: Events.next_meetup,
+      past_meetups: Events.past_meetups,
       page_name: "meetups"
   end
 
   def meetup(conn, %{"slug" => slug}) do
     meetup =
-      Meetup.past_meetups
+      Events.past_meetups
       |> Enum.find(& &1.slug == slug)
 
     if meetup do

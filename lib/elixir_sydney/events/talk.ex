@@ -1,5 +1,8 @@
-defmodule ElixirSydney.Talk do
+defmodule ElixirSydney.Events.Talk do
   use ElixirSydney, :model
+
+  alias ElixirSydney.Events.Person
+  alias ElixirSydney.Events.Meetup
 
   schema "talk" do
     field :title, :string
@@ -8,7 +11,7 @@ defmodule ElixirSydney.Talk do
     field :slide_url, :string
     field :video_url, :string
 
-    belongs_to :presenter, ElixirSydney.Person
-    belongs_to :meetup, ElixirSydney.Meetup
+    belongs_to :presenter, Person
+    belongs_to :meetup, Meetup
   end
 end

@@ -1,5 +1,7 @@
-defmodule ElixirSydney.Person do
+defmodule ElixirSydney.Events.Person do
   use ElixirSydney, :model
+
+  alias ElixirSydney.Events.Talk
 
   schema "person" do
     field :name, :string
@@ -8,7 +10,7 @@ defmodule ElixirSydney.Person do
     field :website_url, :string
     field :twitter, :string
 
-    has_many :talks, ElixirSydney.Talk, foreign_key: :presenter_id
+    has_many :talks, Talk, foreign_key: :presenter_id
   end
 
 end
