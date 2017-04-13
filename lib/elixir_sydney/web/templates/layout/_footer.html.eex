@@ -30,7 +30,10 @@
             <h5 class="footer-heading">Elixir Sydney</h5>
             <ul>
               <li>
-                <%= link "Github", to: "https://github.com/sydneyelixir/sydneyelixir.github.io", target: "_blank" %>
+                <%= link "Elixir Sydney Github", to: "https://github.com/sydneyelixir/sydneyelixir.github.io", target: "_blank" %>
+              </li>
+              <li>
+                <%= link "Website Github", to: "https://github.com/sydneyelixir/elixir-sydney-website", target: "_blank" %>
               </li>
               <li>
                 <%= link "Elixir Camp", to: "http://elixir.camp/", target: "_blank" %>
