@@ -59,8 +59,10 @@ config :logger, level: :info
 
 config :elixir_sydney, ElixirSydney.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: System.get_env("DB_PASSWORD")
-  database: "elixir_sydney_prod",
-  hostname: "localhost",
+  username: System.get_env("DB_USER"),
+  password: System.get_env("DB_PASSWORD"),
+  database: System.get_env("DB_NAME"),
+  hostname: System.get_env("DB_HOST"),
+  port: System.get_env("DB_PORT"),
   pool: Ecto.Adapters.SQL.Sandbox
+
