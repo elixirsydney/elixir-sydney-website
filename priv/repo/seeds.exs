@@ -23,6 +23,13 @@ defmodule Seeds do
       }
     )
 
+    camp_wombaroo = Repo.insert!(
+      %Location{
+        name: "Camp Wombaroo, 162 Black Spring Rd, High Range ",
+        map_url: "https://www.google.com.au/maps/place/162+Black+Spring+Rd,+High+Range+NSW+2575/@-34.3844071,150.3211074,17z/data=!3m1!4b1!4m5!3m4!1s0x6b13bbf3af35d4ad:0x1f01929efe5f4dfc!8m2!3d-34.3844071!4d150.3232961"
+      }
+    )
+
     andrew_harvey = Repo.insert!(
       %Person{
         name: "Andrew Harvey",
@@ -94,46 +101,162 @@ defmodule Seeds do
     )
 
     geoff_hodgson = Repo.insert!(
-    %Person{
-      name: "Geoff Hodgson",
-      avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/d/e/2/8/member_138056872.jpeg",
-      meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/105623792/",
-      website_url: "",
-      twitter: "@geoffroh"
-    }
+      %Person{
+        name: "Geoff Hodgson",
+        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/d/e/2/8/member_138056872.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/105623792/",
+        website_url: "",
+        twitter: "@geoffroh"
+      }
     )
 
     alex_tsirel = Repo.insert!(
-    %Person{
-      name: "Alex Tsirel",
-      avatar_url: "https://secure.meetupstatic.com/photos/member/1/b/c/8/member_126127112.jpeg",
-      meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98555692/",
-      website_url: "",
-      twitter: ""
-    }
+      %Person{
+        name: "Alex Tsirel",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/1/b/c/8/member_126127112.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98555692/",
+        website_url: "",
+        twitter: ""
+      }
     )
 
     alan_milligan = Repo.insert!(
-    %Person{
-      name: "Alan Milligan",
-      avatar_url: "https://secure.meetupstatic.com/photos/member/a/1/b/0/highres_209981392.jpeg",
-      meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/13064111/",
-      website_url: "",
-      twitter: "@bastionlinux"
-    }
+      %Person{
+        name: "Alan Milligan",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/a/1/b/0/highres_209981392.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/13064111/",
+        website_url: "",
+        twitter: "@bastionlinux"
+      }
     )
 
     garret_heinlen = Repo.insert!(
-    %Person{
-      name: "Garret Heinlen",
-      avatar_url: "https://secure.meetupstatic.com/photos/member/b/7/a/4/member_184907012.jpeg",
-      meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98723842/",
-      website_url: "",
-      twitter: "@gogogarrett"
-    }
+      %Person{
+        name: "Garret Heinlen",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/b/7/a/4/member_184907012.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98723842/",
+        website_url: "",
+        twitter: "@gogogarrett"
+      }
+    )
+
+    kevin_yank = Repo.insert!(
+      %Person{
+        name: "Kevin Yank",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/c/7/0/d/highres_260810957.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/Elm-Melbourne/members/121828272/",
+        website_url: "",
+        twitter: "@sentience"
+      }
+    )
+
+    rob_howard = Repo.insert!(
+      %Person{
+        name: "Rob Howard",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/7/5/b/d/highres_255690141.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/12492360/",
+        website_url: "",
+        twitter: "@damncabbage"
+      }
+    )
+
+    jo_cranford = Repo.insert!(
+      %Person{
+        name: "Jo Cranford",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/2/e/c/8/highres_243551976.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/9079730/",
+        website_url: "",
+        twitter: "@jocranford"
+      }
+    )
+
+    alan_harper = Repo.insert!(
+      %Person{
+        name: "Alan Harper",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/4/d/7/8/highres_167239832.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/349/",
+        website_url: "",
+        twitter: "@aussiegeek"
+      }
     )
 
     raw_meetups = [
+      %Meetup{
+        title: "Elixir Camp",
+        slug: "elixir-camp",
+        date: ~D[2017-04-22],
+        location: camp_wombaroo,
+        description: """
+        Elixir Camp is a place for people interested in Elixir, Erlang and related technologies to gather, network, share ideas and generally have a great time. While there's a general focus on Elixir developers, techy people of any background are encouraged to attend.
+        """,
+        url: "https://elixir.camp/",
+        talks: [
+          %Talk{
+            title: "Intro to GraphQL with Elixir",
+            slug: "intro-to-graphql-with-elixir",
+            description: """
+            GraphQL is a relevant up and coming API technology that offers API consumers much more flexibility than REST. It's a well-defined standard (as opposed to REST, which is convention driven) and supports streaming and subscriptions. Elixir is an ideal platform on which to build GraphQL APIs.
+            """,
+            presenter: james_sadler
+          },
+          %Talk{
+            title: "Intro to Phoenix 1.3 and Plug",
+            slug: "intro-to-phoenix-1-3-and-plug",
+            description: """
+            A talk to demystify the macro magic in Phoenix to demonstrate it's simplicity.
+            """,
+            presenter: josh_price
+          },
+          %Talk{
+            title: "Introduction to Elm",
+            slug: "introduction-to-elm",
+            description: """
+            Just like Elixir challenges some of Ruby’s design decisions on the backend, Elm challenges aspects of the JavaScript language on the frontend to create a delightful developer experience. In this session, you’ll get a grand tour of the sources of developer happiness in Elm, and hopefully be convinced to give this exciting new language a closer look.
+            """,
+            presenter: kevin_yank
+          },
+          %Talk{
+            title: "Beyond Simple Types in Elm",
+            slug: "beyond-simple-types-in-elm",
+            description: """
+            Elm gives us the ability to use types to talk about the shape of our data. It's really tempting to just use simple things like String, Number, etc, but there's a bunch of ways we can tell Elm more about what we intend, and use types as a tool instead of just a constraint.
+            """,
+            presenter: rob_howard
+          },
+          %Talk{
+            title: "Production Maintenance",
+            slug: "production-maintenance",
+            description: """
+            Right after you head to production lots of issues will appear. This talk will cover common issues with building/publishing releases, showing difference between production environment and production release, monitoring and zero-downtime deploy with upgrade or phased reboot.
+            """,
+            presenter: alex_tsirel
+          },
+          %Talk{
+            title: "Drinking the Elixir a story about breaking up a Rails Monolith",
+            slug: "drinking-the-elixir-a-story-about-breaking-up-a-rails-monolith",
+            description: """
+            A tale about a journey from a Rails Monolith into Elixir Microservices. Why we chose Elixir, and what we've learned along the way.
+            """,
+            presenter: jo_cranford
+          },
+          %Talk{
+            title: "Whats the point of a process registry",
+            slug: "whats-the-point-of-a-process-registry",
+            description: """
+            Thoughts on how to handle many many genservers doing tiny jobs.
+            """,
+            presenter: alan_harper
+          },
+          %Talk{
+            title: "GenServer 101",
+            slug: "genserver-101",
+            description: """
+            A quick rundown on GenServers and their implementation
+            """,
+            presenter: martin_stannard
+          }
+        ]
+      },
       %Meetup{
         title: "🔥 Phoenix, Ecto and Nerves",
         slug: "phoenix-ecto-and-nerves",
