@@ -11,7 +11,8 @@
 # and so on) as they will fail if something goes wrong.
 
 defmodule Seeds do
-  alias ElixirSydney.{Repo, Meetup, Talk, Person, Location}
+  alias ElixirSydney.Repo
+  alias ElixirSydney.Events.{Meetup, Talk, Person, Location}
 
   def insert_meetups do
 
