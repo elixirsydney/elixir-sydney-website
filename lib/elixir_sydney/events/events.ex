@@ -25,6 +25,13 @@ defmodule ElixirSydney.Events do
     |> Repo.all
   end
 
+  def all_meetups do
+    Meetup
+    |> order_by(desc: :date)
+    |> preload(talks: :presenter)
+    |> Repo.all
+  end
+
   @doc """
   Returns the list of meetups.
 

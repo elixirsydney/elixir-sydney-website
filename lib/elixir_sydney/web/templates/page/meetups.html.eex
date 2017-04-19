@@ -1,3 +1,5 @@
+<%= json_ld_for_meetups(@all_meetups) %>
+
 <div class="container-sm">
   <div class="page-intro">
     <h1 class="page-title">Meetups</h1>

@@ -17,6 +17,7 @@ defmodule ElixirSydney.Web.PageController do
     render conn, "meetups.html",
       next_meetup: Events.next_meetup,
       past_meetups: Events.past_meetups,
+      all_meetups: Events.all_meetups,
       page_name: "meetups"
   end
 

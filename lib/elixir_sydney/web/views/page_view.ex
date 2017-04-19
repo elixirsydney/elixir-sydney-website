@@ -21,4 +21,36 @@ defmodule ElixirSydney.Web.PageView do
     Timex.format!(date, "{Mshort}")
   end
 
+  def json_ld_for_meetups(meetups, opts \\ [pretty: true]) do
+    {:safe, """
+    <script type="application/ld+json">
+      #{meetups |> Enum.map(&to_ld_json(&1)) |> Poison.encode!(opts)}
+    </script>
+    """}
+  end
+
+  defp to_ld_json(meetup) do
+    %{
+      "@context": "http://schema.org",
+      "@type": "Event",
+      "name": meetup.title,
+      "description": meetup.description,
+      "url": meetup.url,
+      "startDate": meetup.date,
+      "endDate": meetup.date,
+      "location": %{
+        "@type": "Place",
+        "name": "Pivotal Labs",
+        "address": %{
+          "@type": "PostalAddress",
+          "streetAddress": "11/155 Clarence Street",
+          "addressLocality": "Sydney",
+          "addressRegion": "NSW",
+          "postalCode": "2000",
+          "addressCountry": "Australia"
+        }
+      }
+    }
+  end
+
 end
