@@ -334,7 +334,9 @@ defmodule Seeds do
         date: ~D[2017-04-05],
         location: pivotal_office,
         description: """
-        With the new updates to Phoenix 1.3 and Ecto 2.1, we will take another look at the things we can do with Phoenix and Ecto. We will also discuss Nerves which allows the building of embedded software for RaspberryPis in Elixir.
+        With the new updates to <strong>Phoenix 1.3</strong> and <strong>Ecto 2.1</strong>, we will take another look at the things we can do with Phoenix and Ecto.
+
+        We will also show you some fun things you can do with <strong>Nerves</strong>, which lets you build embedded software for Raspberry Pis in Elixir.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/238021480/",
         talks: [
