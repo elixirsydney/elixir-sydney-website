@@ -23,6 +23,27 @@ defmodule Seeds do
       }
     )
 
+    boodl_offices = Repo.insert!(
+      %Location{
+        name: "Boodl, 10 Boronia St, Redfern",
+        map_url: "https://www.google.com/maps/place/10+Boronia+St,+Redfern+NSW+2016,+Australia/@-33.8935443,151.2108881,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12b1e11d04f5f9:0xf0d997b2532ed131!8m2!3d-33.8935443!4d151.2130768?hl=en"
+      }
+    )
+
+    the_workbench = Repo.insert!(
+      %Location{
+        name: "The Workbench, 645 Harris Street, Ultimo",
+        map_url: "https://www.google.com/maps/place/645+Harris+St,+Ultimo+NSW+2007,+Australia/@-33.8807136,151.1977567,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae25ea406f59:0x76166db07716dbbc!8m2!3d-33.8807136!4d151.1999454?hl=en"
+      }
+    )
+
+    tabcorp = Repo.insert!(
+      %Location{
+        name: "Tabcorp, Level 31, 680 George Street",
+        map_url: "https://www.google.com/maps/place/31%2F680+George+St,+Sydney+NSW+2000,+Australia/@-33.8773271,151.2039305,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae3cc6719adf:0x592d81d4f9316f02!8m2!3d-33.8773271!4d151.2061192?hl=en"
+      }
+    )
+
     camp_wombaroo = Repo.insert!(
       %Location{
         name: "Camp Wombaroo, 162 Black Spring Rd, High Range ",
@@ -177,6 +198,56 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/349/",
         website_url: "",
         twitter: "@aussiegeek"
+      }
+    )
+
+    brenton_annan = Repo.insert!(
+      %Person{
+        name: "Brenton Annan",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/2/3/3/4/highres_129969012.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/100865042/",
+        website_url: "",
+        twitter: ""
+      }
+    )
+
+    dylan_griffith = Repo.insert!(
+      %Person{
+        name: "Dylan Griffith",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/2/a/9/2/highres_253750898.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/199501518/",
+        website_url: "dylangriffith.net",
+        twitter: "@DylanJGriffith"
+      }
+    )
+
+    mick_heywood = Repo.insert!(
+      %Person{
+        name: "Mick Heywood",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/c/b/8/b/highres_248512107.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/181553272/",
+        website_url: "",
+        twitter: ""
+      }
+    )
+
+    igor_kapkov = Repo.insert!(
+      %Person{
+        name: "Igor Kapkov",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/b/9/6/6/highres_195167462.jpeg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/144945092/",
+        website_url: "",
+        twitter: "@igasgeek"
+      }
+    )
+
+    toby_hede = Repo.insert!(
+      %Person{
+        name: "Toby Hede",
+        avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAvUAAAAJDQzMWM5ZGMzLTAzN2ItNGRiMi1iMDJmLWI4MWM4MzVkNTUzOA.jpg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/144945092/",
+        website_url: "",
+        twitter: "@tobyhede"
       }
     )
 
@@ -566,6 +637,246 @@ defmodule Seeds do
                 presenter: andrew_harvey
               }
             ]
+          },
+          %Meetup{
+            title: "May Meetup",
+            slug: "may-meetup",
+            date: ~D[2016-05-04],
+            location: boodl_offices,
+            description: """
+            We'll be at Booodl again this month.
+            There's space for short demos of something you're working on or a lightning talk if you'd like to present something.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/230804264/",
+            talks: [
+              %Talk{
+                title: "The Future of Elixir",
+                slug: "the-future-of-elixir",
+                description: """
+                Discussion of new features in 1.3
+                """,
+                presenter: josh_price
+              },
+              %Talk{
+                title: "Generative Grammars with VoxPop",
+                slug: "generative-grammars-with-voxpop",
+                description: """
+                Generative Grammars with VoxPop
+                """,
+                slide_url: "http://sydneyelixir.github.io/meetups/2016-05/generative_grammars-andrew_harvey/voxpop.pdf",
+                presenter: andrew_harvey
+              },
+              %Talk{
+                title: "Cloud Deployment and Buildpack Internals",
+                slug: "cloud-deployment-and-buildpack-internals",
+                description: """
+                Cloud Deployment and Buildpack Internals
+                """,
+                slide_url: "http://sydneyelixir.github.io/meetups/2016-05/cloud_deployment-josh_price/cloud_deployment-josh_price.pdf",
+                presenter: josh_price
+              }
+            ]
+          },
+          %Meetup{
+            title: "April Meetup",
+            slug: "april-meetup",
+            date: ~D[2016-04-06],
+            location: boodl_offices,
+            description: """
+            We'll be at Booodl again this month.
+            We've got some very exciting talks lined up this month.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/230030565/",
+            talks: [
+              %Talk{
+                title: "Event Sourcing and GenEvent",
+                slug: "event-sourcing-and-genevent",
+                description: """
+                Event Sourcing and GenEvent
+                """,
+                slide_url: "http://sydneyelixir.github.io/meetups/2016-03/event_sourcing_genevent-brenton_annan/event_sourcing_gen_event_talk.html#1",
+                presenter: brenton_annan
+              },
+              %Talk{
+                title: "Phoenix and Elm",
+                slug: "phoenix-and-elm",
+                description: """
+                Phoenix and Elm
+                """,
+                presenter: martin_stannard
+              },
+              %Talk{
+                title: "RabbitMQ",
+                slug: "rabbitmq",
+                description: """
+                RabbitMQ
+                """,
+                presenter: dylan_griffith
+              }
+            ]
+          },
+          %Meetup{
+            title: "March Meetup",
+            slug: "march-meetup",
+            date: ~D[2016-03-02],
+            location: boodl_offices,
+            description: """
+            We'll be at Booodl again this month, beer and pizza provided (thanks to Booodl).
+            There is space for another short talk if you have something to present. Let Andrew or myself know.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/229081433/",
+            talks: [
+              %Talk{
+                title: "Elixir and ejabberd",
+                slug: "elixir-and-ejabberd",
+                description: """
+                Elixir and ejabberd
+                """,
+                presenter: mick_heywood
+              },
+              %Talk{
+                title: "Code reading or hacking",
+                slug: "code-reading-or-hacking",
+                description: """
+                Code reading or Hacking
+                """,
+                presenter: andrew_harvey
+              }
+            ]
+          },
+          %Meetup{
+            title: "February Meetup",
+            slug: "february-meetup",
+            date: ~D[2016-02-03],
+            location: boodl_offices,
+            description: """
+            We'll be at Booodl this month, so please double check the directions.
+            There will be beer and pizza provided thanks to Booodl!
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/228421606/",
+            talks: [
+              %Talk{
+                title: "Intro to GraphQL",
+                slug: "intro-to-graphql",
+                description: """
+                Intro to GraphQL
+                """,
+                slide_url: "https://github.com/sydneyelixir/sydneyelixir.github.io/tree/master/meetups/2016-02",
+                presenter: josh_price
+              },
+              %Talk{
+                title: "OTP in Action gen_fsm",
+                slug: "otp-in-action-gen_fsm",
+                description: """
+                OTP in Action gen_fsm
+                """,
+                slide_url: "http://sydneyelixir.github.io/meetups/2016-02/intro_to_genfsm-garrett_heinlen/presentation.pdf",
+                presenter: garret_heinlen
+              },
+              %Talk{
+                title: "OTP in Action gen_server",
+                slug: "otp-in-action-gen_server",
+                description: """
+                OTP in Action gen_server
+                """,
+                slide_url: "http://sydneyelixir.github.io/meetups/2016-02/intro_to_genserver-martin_stannard/genserver.pdf",
+                presenter: martin_stannard
+              }
+            ]
+          },
+          %Meetup{
+            title: "First Meetup of 2016",
+            slug: "first-meetup-of-2016",
+            date: ~D[2016-01-13],
+            location: the_workbench,
+            description: """
+            Happy New Year everyone!
+            We've got some great talks lined up.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/227813634/",
+            talks: [
+              %Talk{
+                title: "Intro to Elm",
+                slug: "intro-to-elm",
+                description: """
+                Intro to Elm
+                """,
+                slide_url: "http://igas.me/talks/2016/elm/",
+                presenter: igor_kapkov
+              },
+              %Talk{
+                title: "Intro to Ecto",
+                slug: "intro-to-ecto",
+                description: """
+                Intro to Ecto
+                """,
+                slide_url: "http://sydneyelixir.github.io/meetups/2016-01/intro_to_ecto-garrett_heinlen/presentation.pdf",
+                presenter: garret_heinlen
+              },
+              %Talk{
+                title: "Building Elixir web apps without Phoenix",
+                slug: "building-elixir-web-apps-without-phoenix",
+                description: """
+                Building Elixir web apps without Phoenix
+                """,
+                slide_url: "https://codewords.recurse.com/issues/five/building-a-web-framework-from-scratch-in-elixir",
+                presenter: dylan_griffith
+              }
+            ]
+          },
+          %Meetup{
+            title: "Last SydEx meetup for the year",
+            slug: "last-sydex-meetup-for-the-year",
+            date: ~D[2015-12-02],
+            location: the_workbench,
+            description: """
+            Last Sydney Elixir for the year.
+            Plugs are amazing and it's how you build Web applications in Phoenix.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/227042141/",
+            talks: [
+              %Talk{
+                title: "Elixir Deployment",
+                slug: "elixir-deployment",
+                description: """
+                Toby will give a talk about something cool
+                """,
+                presenter: toby_hede
+              },
+              %Talk{
+                title: "Plugs are amazing",
+                slug: "plugs-are-amazing",
+                description: """
+                Josh will demo a plug and walk you through some of the concepts so you can build your own.
+                """,
+                slide_url: "http://sydneyelixir.github.io/meetups/2015-12/presentations/intro_to_plugs-josh_price/elixir_plugs.pdf",
+                presenter: josh_price
+              }
+            ]
+          },
+          %Meetup{
+            title: "November Meetup",
+            slug: "november-meetup",
+            date: ~D[2015-11-04],
+            location: the_workbench,
+            description: """
+            Sorry about the late notice, this month snuck right up on us!
+            Plan is to keep going with the Elixir Etudes which seemed to work really well last time. We'll do some more advanced exercises in a Randori style (working in pairs on the projector). We might do some quick demos of what people have been working on too.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/226497620/",
+            talks: []
+          },
+          %Meetup{
+            title: "October Meetup",
+            slug: "october-meetup",
+            date: ~D[2015-10-07],
+            location: tabcorp,
+            description: """
+            Come along, we'll have beer and food and hack on and talk about Elixir.
+            Doesn't matter what experience level you are, we're mostly quite new to this so join us even if you're just curious.
+            """,
+            url: "https://www.meetup.com/en-AU/sydney-ex/events/225720675/",
+            talks: []
           }
         ]
       }
