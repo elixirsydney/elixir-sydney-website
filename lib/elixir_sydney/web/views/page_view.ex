@@ -1,6 +1,8 @@
 defmodule ElixirSydney.Web.PageView do
   use ElixirSydney.Web, :view
 
+  @meetup_time "6:00pm - 8:30pm"
+
   def markdown_to_html(markdown) do
     {:safe, Earmark.as_html!(markdown)}
   end
@@ -13,13 +15,17 @@ defmodule ElixirSydney.Web.PageView do
     Timex.format!(date, "{WDfull}, {D} {Mfull} {YYYY}")
   end
 
-  def meetup_time do
-    "6:00pm - 8:30pm"
-  end
-
   def short_month(date) do
     Timex.format!(date, "{Mshort}")
   end
+
+  def display_date_time(meetup) do
+    case meetup.slug do
+      "elixir-camp" -> "Friday 21st April to Monday 24th April"
+      _ -> "#{long_date(meetup.date)}, #{@meetup_time}"
+    end
+  end
+
 
   def json_ld_for_meetups(meetups, opts \\ [pretty: true]) do
     {:safe, """

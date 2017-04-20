@@ -7,8 +7,8 @@
         <%= @meetup.title %>
       </h1>
       <p class="byline">
-        <strong><%= long_date(@meetup.date) %>
-          <!-- , <%= meetup_time %> -->
+        <strong>
+          <%= display_date_time(@meetup) %>
         </strong>
       </p>
       <p class="byline">
