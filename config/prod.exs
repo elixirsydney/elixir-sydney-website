@@ -57,4 +57,12 @@ config :logger, level: :info
 #     config :elixir_sydney, ElixirSydney.Endpoint, server: true
 #
 
-import_config "prod_database.secret.exs"
+config :elixir_sydney, ElixirSydney.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("DB_USER"),
+  password: System.get_env("DB_PASSWORD"),
+  database: System.get_env("DB_NAME"),
+  hostname: System.get_env("DB_HOST"),
+  port: System.get_env("DB_PORT"),
+  pool: Ecto.Adapters.SQL.Sandbox
+
