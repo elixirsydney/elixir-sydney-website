@@ -40,12 +40,4 @@
   <section class="logo row">
     <img src="/images/elixir_sydney_400x400.jpg" alt="Elixir Sydney Logo">
   </section>
-
-  <section class="elixir-camp row">
-    <h2>Don't forget about <%= link "Elixir Camp", to: "http://elixir.camp/", target: "_blank" %></h3>
-    <h3>April 21st–24th, 2017</h2>
-    <div class="col-sm-8 col-sm-offset-2">
-      ElixirCamp is a place for people interested in Elixir, Erlang and related technologies to gather, network, share ideas and generally have a great time. While there's a general focus on Elixir developers, techy people of any background are encouraged to attend.
-    </div>
-  </section>
 </article>

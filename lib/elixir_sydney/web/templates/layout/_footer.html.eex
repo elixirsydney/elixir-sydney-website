@@ -36,9 +36,6 @@
                 <%= link "Website Github", to: "https://github.com/sydneyelixir/elixir-sydney-website", target: "_blank" %>
               </li>
               <li>
-                <%= link "Elixir Camp", to: "http://elixir.camp/", target: "_blank" %>
-              </li>
-              <li>
                 <%= link "Exercism Team", to: "http://exercism.io/teams/elixir-sydney", target: "_blank" %>
               </li>
             </ul>
