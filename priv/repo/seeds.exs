@@ -16,236 +16,246 @@ defmodule Seeds do
 
   def insert_meetups do
 
-    pivotal_office = Repo.insert!(
-      %Location{
-        name: "Pivotal Labs, Level 11, 155 Clarence Street",
-        map_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919"
-      }
-    )
+    # pivotal_office = Repo.insert!(
+    #   %Location{
+    #     name: "Pivotal Labs, Level 11, 155 Clarence Street",
+    #     map_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919"
+    #   }
+    # )
+    #
+    # boodl_offices = Repo.insert!(
+    #   %Location{
+    #     name: "Boodl, 10 Boronia St, Redfern",
+    #     map_url: "https://www.google.com/maps/place/10+Boronia+St,+Redfern+NSW+2016,+Australia/@-33.8935443,151.2108881,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12b1e11d04f5f9:0xf0d997b2532ed131!8m2!3d-33.8935443!4d151.2130768?hl=en"
+    #   }
+    # )
+    #
+    # the_workbench = Repo.insert!(
+    #   %Location{
+    #     name: "The Workbench, 645 Harris Street, Ultimo",
+    #     map_url: "https://www.google.com/maps/place/645+Harris+St,+Ultimo+NSW+2007,+Australia/@-33.8807136,151.1977567,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae25ea406f59:0x76166db07716dbbc!8m2!3d-33.8807136!4d151.1999454?hl=en"
+    #   }
+    # )
+    #
+    # tabcorp = Repo.insert!(
+    #   %Location{
+    #     name: "Tabcorp, Level 31, 680 George Street",
+    #     map_url: "https://www.google.com/maps/place/31%2F680+George+St,+Sydney+NSW+2000,+Australia/@-33.8773271,151.2039305,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae3cc6719adf:0x592d81d4f9316f02!8m2!3d-33.8773271!4d151.2061192?hl=en"
+    #   }
+    # )
+    #
+    # camp_wombaroo = Repo.insert!(
+    #   %Location{
+    #     name: "Camp Wombaroo, 162 Black Spring Rd, High Range ",
+    #     map_url: "https://www.google.com.au/maps/place/162+Black+Spring+Rd,+High+Range+NSW+2575/@-34.3844071,150.3211074,17z/data=!3m1!4b1!4m5!3m4!1s0x6b13bbf3af35d4ad:0x1f01929efe5f4dfc!8m2!3d-34.3844071!4d150.3232961"
+    #   }
+    # )
+    #
+    # andrew_harvey = Repo.insert!(
+    #   %Person{
+    #     name: "Andrew Harvey",
+    #     avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/5/a/3/e/member_224183102.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/11138446/",
+    #     website_url: "",
+    #     twitter: "@mootpointer"
+    #   }
+    # )
+    #
+    # josh_price = Repo.insert!(
+    #   %Person{
+    #     name: "Josh Price",
+    #     avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
+    #     website_url: "",
+    #     twitter: "@joshprice"
+    #   }
+    # )
+    #
+    # sunil_gopinath = Repo.insert!(
+    #   %Person{
+    #     name: "Sunil Gopinath",
+    #     avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/c/2/d/a/member_115669882.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/43452202/",
+    #     website_url: "",
+    #     twitter: ""
+    #   }
+    # )
+    #
+    # martin_stannard = Repo.insert!(
+    #   %Person{
+    #     name: "Martin Stannard",
+    #     avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/1/7/c/c/member_251766092.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/83178992/",
+    #     website_url: "",
+    #     twitter: ""
+    #   }
+    # )
+    #
+    # nick_gunn = Repo.insert!(
+    #   %Person{
+    #     name: "Nick Gunn",
+    #     avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/s/img/2982428616572973604/noPhoto_80.gif",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/205821026/",
+    #     website_url: "",
+    #     twitter: ""
+    #   }
+    # )
+    #
+    # robin_hilliard = Repo.insert!(
+    #   %Person{
+    #     name: "Robin Hilliard",
+    #     avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/a/5/2/f/member_3822287.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/7114884/",
+    #     website_url: "",
+    #     twitter: ""
+    #   }
+    # )
+    #
+    # james_sadler = Repo.insert!(
+    #   %Person{
+    #     name: "James Sadler",
+    #     avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/2/8/f/b/member_258850491.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/202221787/",
+    #     website_url: "",
+    #     twitter: "@freshtonic"
+    #   }
+    # )
+    #
+    # geoff_hodgson = Repo.insert!(
+    #   %Person{
+    #     name: "Geoff Hodgson",
+    #     avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/d/e/2/8/member_138056872.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/105623792/",
+    #     website_url: "",
+    #     twitter: "@geoffroh"
+    #   }
+    # )
+    #
+    # alex_tsirel = Repo.insert!(
+    #   %Person{
+    #     name: "Alex Tsirel",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/1/b/c/8/member_126127112.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98555692/",
+    #     website_url: "",
+    #     twitter: ""
+    #   }
+    # )
+    #
+    # alan_milligan = Repo.insert!(
+    #   %Person{
+    #     name: "Alan Milligan",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/a/1/b/0/highres_209981392.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/13064111/",
+    #     website_url: "",
+    #     twitter: "@bastionlinux"
+    #   }
+    # )
+    #
+    # garret_heinlen = Repo.insert!(
+    #   %Person{
+    #     name: "Garret Heinlen",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/b/7/a/4/member_184907012.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98723842/",
+    #     website_url: "",
+    #     twitter: "@gogogarrett"
+    #   }
+    # )
+    #
+    # kevin_yank = Repo.insert!(
+    #   %Person{
+    #     name: "Kevin Yank",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/c/7/0/d/highres_260810957.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/Elm-Melbourne/members/121828272/",
+    #     website_url: "",
+    #     twitter: "@sentience"
+    #   }
+    # )
+    #
+    # rob_howard = Repo.insert!(
+    #   %Person{
+    #     name: "Rob Howard",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/7/5/b/d/highres_255690141.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/12492360/",
+    #     website_url: "",
+    #     twitter: "@damncabbage"
+    #   }
+    # )
+    #
+    # jo_cranford = Repo.insert!(
+    #   %Person{
+    #     name: "Jo Cranford",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/2/e/c/8/highres_243551976.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/9079730/",
+    #     website_url: "",
+    #     twitter: "@jocranford"
+    #   }
+    # )
+    #
+    # alan_harper = Repo.insert!(
+    #   %Person{
+    #     name: "Alan Harper",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/4/d/7/8/highres_167239832.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/349/",
+    #     website_url: "",
+    #     twitter: "@aussiegeek"
+    #   }
+    # )
+    #
+    # brenton_annan = Repo.insert!(
+    #   %Person{
+    #     name: "Brenton Annan",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/2/3/3/4/highres_129969012.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/100865042/",
+    #     website_url: "",
+    #     twitter: ""
+    #   }
+    # )
+    #
+    # dylan_griffith = Repo.insert!(
+    #   %Person{
+    #     name: "Dylan Griffith",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/2/a/9/2/highres_253750898.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/199501518/",
+    #     website_url: "dylangriffith.net",
+    #     twitter: "@DylanJGriffith"
+    #   }
+    # )
+    #
+    # mick_heywood = Repo.insert!(
+    #   %Person{
+    #     name: "Mick Heywood",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/c/b/8/b/highres_248512107.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/181553272/",
+    #     website_url: "",
+    #     twitter: ""
+    #   }
+    # )
+    #
+    # igor_kapkov = Repo.insert!(
+    #   %Person{
+    #     name: "Igor Kapkov",
+    #     avatar_url: "https://secure.meetupstatic.com/photos/member/b/9/6/6/highres_195167462.jpeg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/144945092/",
+    #     website_url: "",
+    #     twitter: "@igasgeek"
+    #   }
+    # )
+    #
+    # toby_hede = Repo.insert!(
+    #   %Person{
+    #     name: "Toby Hede",
+    #     avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAvUAAAAJDQzMWM5ZGMzLTAzN2ItNGRiMi1iMDJmLWI4MWM4MzVkNTUzOA.jpg",
+    #     meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/144945092/",
+    #     website_url: "",
+    #     twitter: "@tobyhede"
+    #   }
+    # )
 
-    boodl_offices = Repo.insert!(
-      %Location{
-        name: "Boodl, 10 Boronia St, Redfern",
-        map_url: "https://www.google.com/maps/place/10+Boronia+St,+Redfern+NSW+2016,+Australia/@-33.8935443,151.2108881,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12b1e11d04f5f9:0xf0d997b2532ed131!8m2!3d-33.8935443!4d151.2130768?hl=en"
-      }
-    )
-
-    the_workbench = Repo.insert!(
-      %Location{
-        name: "The Workbench, 645 Harris Street, Ultimo",
-        map_url: "https://www.google.com/maps/place/645+Harris+St,+Ultimo+NSW+2007,+Australia/@-33.8807136,151.1977567,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae25ea406f59:0x76166db07716dbbc!8m2!3d-33.8807136!4d151.1999454?hl=en"
-      }
-    )
-
-    tabcorp = Repo.insert!(
-      %Location{
-        name: "Tabcorp, Level 31, 680 George Street",
-        map_url: "https://www.google.com/maps/place/31%2F680+George+St,+Sydney+NSW+2000,+Australia/@-33.8773271,151.2039305,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae3cc6719adf:0x592d81d4f9316f02!8m2!3d-33.8773271!4d151.2061192?hl=en"
-      }
-    )
-
-    camp_wombaroo = Repo.insert!(
-      %Location{
-        name: "Camp Wombaroo, 162 Black Spring Rd, High Range ",
-        map_url: "https://www.google.com.au/maps/place/162+Black+Spring+Rd,+High+Range+NSW+2575/@-34.3844071,150.3211074,17z/data=!3m1!4b1!4m5!3m4!1s0x6b13bbf3af35d4ad:0x1f01929efe5f4dfc!8m2!3d-34.3844071!4d150.3232961"
-      }
-    )
-
-    andrew_harvey = Repo.insert!(
+    dave_parry = Repo.insert!(
       %Person{
-        name: "Andrew Harvey",
-        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/5/a/3/e/member_224183102.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/11138446/",
-        website_url: "",
-        twitter: "@mootpointer"
-      }
-    )
-
-    josh_price = Repo.insert!(
-      %Person{
-        name: "Josh Price",
-        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/4/5/c/e/member_12197870.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
-        website_url: "",
-        twitter: "@joshprice"
-      }
-    )
-
-    sunil_gopinath = Repo.insert!(
-      %Person{
-        name: "Sunil Gopinath",
-        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/c/2/d/a/member_115669882.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/43452202/",
-        website_url: "",
-        twitter: ""
-      }
-    )
-
-    martin_stannard = Repo.insert!(
-      %Person{
-        name: "Martin Stannard",
-        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/1/7/c/c/member_251766092.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/83178992/",
-        website_url: "",
-        twitter: ""
-      }
-    )
-
-    nick_gunn = Repo.insert!(
-      %Person{
-        name: "Nick Gunn",
-        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/s/img/2982428616572973604/noPhoto_80.gif",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/205821026/",
-        website_url: "",
-        twitter: ""
-      }
-    )
-
-    robin_hilliard = Repo.insert!(
-      %Person{
-        name: "Robin Hilliard",
-        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/a/5/2/f/member_3822287.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/7114884/",
-        website_url: "",
-        twitter: ""
-      }
-    )
-
-    james_sadler = Repo.insert!(
-      %Person{
-        name: "James Sadler",
-        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/2/8/f/b/member_258850491.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/202221787/",
-        website_url: "",
-        twitter: "@freshtonic"
-      }
-    )
-
-    geoff_hodgson = Repo.insert!(
-      %Person{
-        name: "Geoff Hodgson",
-        avatar_url: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/d/e/2/8/member_138056872.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/105623792/",
-        website_url: "",
-        twitter: "@geoffroh"
-      }
-    )
-
-    alex_tsirel = Repo.insert!(
-      %Person{
-        name: "Alex Tsirel",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/1/b/c/8/member_126127112.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98555692/",
-        website_url: "",
-        twitter: ""
-      }
-    )
-
-    alan_milligan = Repo.insert!(
-      %Person{
-        name: "Alan Milligan",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/a/1/b/0/highres_209981392.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/13064111/",
-        website_url: "",
-        twitter: "@bastionlinux"
-      }
-    )
-
-    garret_heinlen = Repo.insert!(
-      %Person{
-        name: "Garret Heinlen",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/b/7/a/4/member_184907012.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98723842/",
-        website_url: "",
-        twitter: "@gogogarrett"
-      }
-    )
-
-    kevin_yank = Repo.insert!(
-      %Person{
-        name: "Kevin Yank",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/c/7/0/d/highres_260810957.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/Elm-Melbourne/members/121828272/",
-        website_url: "",
-        twitter: "@sentience"
-      }
-    )
-
-    rob_howard = Repo.insert!(
-      %Person{
-        name: "Rob Howard",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/7/5/b/d/highres_255690141.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/12492360/",
-        website_url: "",
-        twitter: "@damncabbage"
-      }
-    )
-
-    jo_cranford = Repo.insert!(
-      %Person{
-        name: "Jo Cranford",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/2/e/c/8/highres_243551976.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/9079730/",
-        website_url: "",
-        twitter: "@jocranford"
-      }
-    )
-
-    alan_harper = Repo.insert!(
-      %Person{
-        name: "Alan Harper",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/4/d/7/8/highres_167239832.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/349/",
-        website_url: "",
-        twitter: "@aussiegeek"
-      }
-    )
-
-    brenton_annan = Repo.insert!(
-      %Person{
-        name: "Brenton Annan",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/2/3/3/4/highres_129969012.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/100865042/",
-        website_url: "",
-        twitter: ""
-      }
-    )
-
-    dylan_griffith = Repo.insert!(
-      %Person{
-        name: "Dylan Griffith",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/2/a/9/2/highres_253750898.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/199501518/",
-        website_url: "dylangriffith.net",
-        twitter: "@DylanJGriffith"
-      }
-    )
-
-    mick_heywood = Repo.insert!(
-      %Person{
-        name: "Mick Heywood",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/c/b/8/b/highres_248512107.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/181553272/",
-        website_url: "",
-        twitter: ""
-      }
-    )
-
-    igor_kapkov = Repo.insert!(
-      %Person{
-        name: "Igor Kapkov",
-        avatar_url: "https://secure.meetupstatic.com/photos/member/b/9/6/6/highres_195167462.jpeg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/144945092/",
-        website_url: "",
-        twitter: "@igasgeek"
-      }
-    )
-
-    toby_hede = Repo.insert!(
-      %Person{
-        name: "Toby Hede",
-        avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAvUAAAAJDQzMWM5ZGMzLTAzN2ItNGRiMi1iMDJmLWI4MWM4MzVkNTUzOA.jpg",
-        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/144945092/",
+        name: "Dave Parry",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/d/3/4/c/member_81234092.jpeg",
+        meetup_url: "https://www.meetup.com/sydney-ex/members/12433325/",
         website_url: "",
         twitter: "@tobyhede"
       }
@@ -253,7 +263,50 @@ defmodule Seeds do
 
     raw_meetups = [
       %Meetup{
-        title: "Elixir Camp",
+        title: "☁️ Cloud Deployment and 🚨 Nerves",
+        slug: "cloud-deployment-and-nerves",
+        date: ~D[2017-05-03],
+        location: pivotal_office,
+        description: """
+        This month we'll be recapping the awesomeness that was Elixir Camp.
+
+        Dave Parry will walk us through a fully buzzword compliant cloud deployment stack including Kubernetes, Terraform, AWS and Buildkite.
+
+        Andrew will keep trucking and dive deeper into running Elixir on embedded hardware.
+        """,
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/238021480/",
+        talks: [
+          %Talk{
+            title: "Functional Firmware with Nerves (Part 2)",
+            slug: "functional-firmware-with-nerves-part-2",
+            description: """
+            In this talk we will keep exploring Nerves, the Elixir framework for building and deploying embedded software. Nerves is the easiest way to deploy Elixir to the Raspberry Pi or the Beaglebone.
+            """,
+            presenter: andrew_harvey
+          },
+          %Talk{
+            title: "Cloud Deployment with Kubernetes, Terraform and Buildkite",
+            slug: "cloud-deployment-with-kubernetes-terraform-and-buildkite",
+            description: """
+            Dave will give a quick tour of his "Fully Buzzword Compliant" cloud deployment setup on AWS for deploying Elixir applications.
+            """,
+            slide_url: nil,
+            presenter: dave_parry
+          },
+          %Talk{
+            title: "Elixir Camp Recap",
+            slug: "elixir-camp-recap",
+            description: """
+            Elixir was a really fantastic weekend. We had great talks, we had fires while we munched on delicious food (including 10hr smoked pulled pork).
+
+            Josh will give you a quick rundown of some of the highlights.
+            """,
+            presenter: josh_price
+          }
+        ]
+      },
+      %Meetup{
+        title: "⛺️ Elixir Camp",
         slug: "elixir-camp",
         date: ~D[2017-04-22],
         location: camp_wombaroo,
@@ -865,6 +918,7 @@ defmodule Seeds do
         location: the_workbench,
         description: """
         Sorry about the late notice, this month snuck right up on us!
+
         Plan is to keep going with the Elixir Etudes which seemed to work really well last time. We'll do some more advanced exercises in a Randori style (working in pairs on the projector). We might do some quick demos of what people have been working on too.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/226497620/",
@@ -885,7 +939,7 @@ defmodule Seeds do
     ]
 
     for raw_meetup <- raw_meetups do
-      ElixirSydney.Repo.insert!(raw_meetup)
+      ElixirSydney.Repo.insert!(raw_meetup, on_conflict: :replace_all, conflict_target: :slug)
     end
 
   end
