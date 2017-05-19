@@ -41,7 +41,7 @@ defmodule ElixirSydney.Mixfile do
      {:cowboy, "~> 1.0"},
      {:slugger, "~> 0.1"},
      {:timex, "~> 3.1"},
-     {:timex_ecto, "~> 3.1.1"},
+     {:timex_ecto, "~> 3.1"},
      {:absinthe, "~> 1.3.0-beta"},
      {:absinthe_plug, "~> 1.3.0-beta"}]
   end
