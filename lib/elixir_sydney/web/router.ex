@@ -25,7 +25,6 @@ defmodule ElixirSydney.Web.Router do
     get "/meetup/:slug", PageController, :meetup, param: "slug"
   end
 
-  # Other scopes may use custom stacks.
   scope "/graphql" do
     pipe_through :api
 

@@ -22,14 +22,23 @@
   </div>
 
   <p class="mt-1">
-    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.a0ec3119d8db2bc5422f2144c89ad7a9.en.html#dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=elixirsydney&amp;show_count=true&amp;show_screen_name=true&amp;size=l&amp;time=1487642361501" style="position: static; visibility: visible; width: 250px; height: 28px;" data-screen-name="sydjs">
+    <iframe
+      id="twitter-widget-0"
+      scrolling="no"
+      frameborder="0"
+      allowtransparency="true"
+      class="twitter-follow-button twitter-follow-button-rendered"
+      title="Follow Elixir Sydney on Twitter"
+      src="http://platform.twitter.com/widgets/follow_button.a0ec3119d8db2bc5422f2144c89ad7a9.en.html#dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=elixirsydney&amp;show_count=true&amp;show_screen_name=true&amp;size=l&amp;time=1487642361501"
+      style="width: 270px; height: 28px;"
+      data-screen-name="elixirsydney">
     </iframe>
   </p>
 
   <section class=" join-us row">
     <div class="col-sm-4 col-sm-offset-4">
       <%=
-        link "JOIN US NOW",
+        link "Join Us",
           to: "https://www.meetup.com/en-AU/sydney-ex/join",
           target: "_blank",
           class: "btn btn-lg btn-block btn-primary mv-1"
