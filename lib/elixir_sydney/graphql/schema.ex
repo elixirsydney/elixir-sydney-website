@@ -32,10 +32,7 @@ defmodule ElixirSydney.GraphQL.Schema do
     field :date, :date
 
     @desc "The location of the meetup"
-    field :location, :string
-
-    @desc "The maps link to the meetup"
-    field :location_url, :string
+    field :location, :location
 
     @desc "The description of the meetup"
     field :description, :string
@@ -81,5 +78,14 @@ defmodule ElixirSydney.GraphQL.Schema do
 
     @desc "The persons twitter handle"
     field :twitter_handle, :string
+  end
+
+  @desc "A Meetup Location or Venue"
+  object :location do
+    @desc "The name of the Venue or Location"
+    field :name, :string
+
+    @desc "The maps url"
+    field :map_url, :string
   end
 end
