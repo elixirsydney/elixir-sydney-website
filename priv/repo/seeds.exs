@@ -15,40 +15,41 @@ defmodule Seeds do
   alias ElixirSydney.Events.{Meetup, Talk, Person, Location}
 
   def insert_meetups do
-    pivotal_office = Repo.insert!(
-      %Location{
-        name: "Pivotal Labs, Level 11, 155 Clarence Street",
-        map_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919"
-      }
-    )
+    pivotal_office = Repo.insert!(%Location{
+      name: "Pivotal Labs",
+      address: "Level 11, 155 Clarence Street",
+      map_url: "https://www.google.com.au/maps/dir//Pivotal,+11%2F155+Clarence+St,+Sydney+NSW+2000/@-33.8679869,151.1698764,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x6b12ae3f3b312871:0x40fe7bd0f94a2249!2m2!1d151.2049818!2d-33.8679919"
+    }, conflict_target: :name, on_conflict: :replace_all)
 
-    boodl_offices = Repo.insert!(
-      %Location{
-        name: "Boodl, 10 Boronia St, Redfern",
-        map_url: "https://www.google.com/maps/place/10+Boronia+St,+Redfern+NSW+2016,+Australia/@-33.8935443,151.2108881,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12b1e11d04f5f9:0xf0d997b2532ed131!8m2!3d-33.8935443!4d151.2130768?hl=en"
-      }
-    )
+    boodl_offices = Repo.insert!(%Location{
+      name: "Boodl",
+      address: "10 Boronia St",
+      suburb: "Redfern",
+      postcode: "2016",
+      map_url: "https://www.google.com/maps/place/10+Boronia+St,+Redfern+NSW+2016,+Australia/@-33.8935443,151.2108881,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12b1e11d04f5f9:0xf0d997b2532ed131!8m2!3d-33.8935443!4d151.2130768?hl=en"
+    }, conflict_target: :name, on_conflict: :replace_all)
 
-    the_workbench = Repo.insert!(
-      %Location{
-        name: "The Workbench, 645 Harris Street, Ultimo",
-        map_url: "https://www.google.com/maps/place/645+Harris+St,+Ultimo+NSW+2007,+Australia/@-33.8807136,151.1977567,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae25ea406f59:0x76166db07716dbbc!8m2!3d-33.8807136!4d151.1999454?hl=en"
-      }
-    )
+    the_workbench = Repo.insert!(%Location{
+      name: "The Workbench",
+      address: "645 Harris Street",
+      suburb: "Ultimo",
+      postcode: "2007",
+      map_url: "https://www.google.com/maps/place/645+Harris+St,+Ultimo+NSW+2007,+Australia/@-33.8807136,151.1977567,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae25ea406f59:0x76166db07716dbbc!8m2!3d-33.8807136!4d151.1999454?hl=en"
+    }, conflict_target: :name, on_conflict: :replace_all)
 
-    tabcorp = Repo.insert!(
-      %Location{
-        name: "Tabcorp, Level 31, 680 George Street",
-        map_url: "https://www.google.com/maps/place/31%2F680+George+St,+Sydney+NSW+2000,+Australia/@-33.8773271,151.2039305,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae3cc6719adf:0x592d81d4f9316f02!8m2!3d-33.8773271!4d151.2061192?hl=en"
-      }
-    )
+    tabcorp = Repo.insert!(%Location{
+      name: "Tabcorp",
+      address: "Level 31, 680 George Street",
+      map_url: "https://www.google.com/maps/place/31%2F680+George+St,+Sydney+NSW+2000,+Australia/@-33.8773271,151.2039305,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae3cc6719adf:0x592d81d4f9316f02!8m2!3d-33.8773271!4d151.2061192?hl=en"
+    }, conflict_target: :name, on_conflict: :replace_all)
 
-    camp_wombaroo = Repo.insert!(
-      %Location{
-        name: "Camp Wombaroo, 162 Black Spring Rd, High Range ",
-        map_url: "https://www.google.com.au/maps/place/162+Black+Spring+Rd,+High+Range+NSW+2575/@-34.3844071,150.3211074,17z/data=!3m1!4b1!4m5!3m4!1s0x6b13bbf3af35d4ad:0x1f01929efe5f4dfc!8m2!3d-34.3844071!4d150.3232961"
-      }
-    )
+    camp_wombaroo = Repo.insert!(%Location{
+      name: "Camp Wombaroo",
+      address: "162 Black Spring Rd",
+      suburb: "High Range",
+      postcode: "2575",
+      map_url: "https://www.google.com.au/maps/place/162+Black+Spring+Rd,+High+Range+NSW+2575/@-34.3844071,150.3211074,17z/data=!3m1!4b1!4m5!3m4!1s0x6b13bbf3af35d4ad:0x1f01929efe5f4dfc!8m2!3d-34.3844071!4d150.3232961"
+    }, conflict_target: :name, on_conflict: :replace_all)
 
     andrew_harvey = Repo.insert!(
       %Person{
@@ -57,7 +58,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/11138446/",
         website_url: "",
         twitter: "@mootpointer"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     josh_price = Repo.insert!(
@@ -67,7 +68,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/8425371/",
         website_url: "",
         twitter: "@joshprice"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     sunil_gopinath = Repo.insert!(
@@ -77,7 +78,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/43452202/",
         website_url: "",
         twitter: ""
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     martin_stannard = Repo.insert!(
@@ -87,7 +88,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/83178992/",
         website_url: "",
         twitter: ""
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     nick_gunn = Repo.insert!(
@@ -97,7 +98,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/205821026/",
         website_url: "",
         twitter: ""
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     robin_hilliard = Repo.insert!(
@@ -107,7 +108,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/7114884/",
         website_url: "",
         twitter: ""
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     james_sadler = Repo.insert!(
@@ -117,7 +118,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/202221787/",
         website_url: "",
         twitter: "@freshtonic"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     geoff_hodgson = Repo.insert!(
@@ -127,7 +128,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/105623792/",
         website_url: "",
         twitter: "@geoffroh"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     alex_tsirel = Repo.insert!(
@@ -137,7 +138,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98555692/",
         website_url: "",
         twitter: ""
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     alan_milligan = Repo.insert!(
@@ -147,7 +148,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/13064111/",
         website_url: "",
         twitter: "@bastionlinux"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     garret_heinlen = Repo.insert!(
@@ -157,7 +158,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98723842/",
         website_url: "",
         twitter: "@gogogarrett"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     kevin_yank = Repo.insert!(
@@ -167,7 +168,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/Elm-Melbourne/members/121828272/",
         website_url: "",
         twitter: "@sentience"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     rob_howard = Repo.insert!(
@@ -177,7 +178,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/12492360/",
         website_url: "",
         twitter: "@damncabbage"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     jo_cranford = Repo.insert!(
@@ -187,7 +188,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/9079730/",
         website_url: "",
         twitter: "@jocranford"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     alan_harper = Repo.insert!(
@@ -197,7 +198,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/Elixir-Melbourne/members/349/",
         website_url: "",
         twitter: "@aussiegeek"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     brenton_annan = Repo.insert!(
@@ -207,7 +208,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/100865042/",
         website_url: "",
         twitter: ""
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     dylan_griffith = Repo.insert!(
@@ -217,7 +218,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/199501518/",
         website_url: "dylangriffith.net",
         twitter: "@DylanJGriffith"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     mick_heywood = Repo.insert!(
@@ -227,7 +228,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/181553272/",
         website_url: "",
         twitter: ""
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     igor_kapkov = Repo.insert!(
@@ -237,7 +238,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/144945092/",
         website_url: "",
         twitter: "@igasgeek"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     toby_hede = Repo.insert!(
@@ -247,7 +248,7 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/144945092/",
         website_url: "",
         twitter: "@tobyhede"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
     dave_parry = Repo.insert!(
@@ -257,10 +258,69 @@ defmodule Seeds do
         meetup_url: "https://www.meetup.com/sydney-ex/members/12433325/",
         website_url: "",
         twitter: "@tobyhede"
-      }
+      }, conflict_target: :name, on_conflict: :replace_all
     )
 
-    raw_meetups = [
+    jon_rowe = Repo.insert!(
+      %Person{
+        name: "Jon Rowe",
+        avatar_url: "https://pbs.twimg.com/profile_images/752380573746753536/1H9fH_ng_400x400.jpg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/202515018/",
+        website_url: "http://jonrowe.co.uk",
+        twitter: "@jonrowe"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
+    qing_wu = Repo.insert!(
+      %Person{
+        name: "Qing Wu",
+        avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/005/00b/2e0/21b8453.jpg",
+        meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/140014642/",
+        website_url: "http://www.wiserfirst.com",
+        twitter: "@wiserfirst"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
+    meetups = [
+      %Meetup{
+        title: "⛱ Umbrella Apps and 💧 Elixir Macros",
+        slug: "umbrella-apps-and-elixir-macros",
+        date: ~D[2017-06-07],
+        location: pivotal_office,
+        description: """
+        This month we'll be seeing how you can achieve microservices bliss without all the pain and examine the power and mystery of Elixir macros.
+
+        Jon will take us through the basics of Umbrella Apps and explore some interesting use cases for umbrella apps for building a microservice architecture with Phoenix.
+
+        Qing Wu will lead you gently into the land of Elixir macros, you'll be an expert before you know it!
+
+        Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
+
+        We've got not one, but TWO brand new speakers this month which is fantastic! If you'd like to present something or see something presented next month just let us know.
+        """,
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/239476421/",
+        talks: [
+          %Talk{
+            title: "Umbrella Apps and Phoenix Microservices",
+            slug: "umbrella-apps-and-phoenix-microservices",
+            description: """
+            Jon will take us through the basics of Umbrella Apps and explore some interesting use cases for umbrella apps for building a microservice architecture with Phoenix.
+            """,
+            presenter: jon_rowe
+          },
+          %Talk{
+            title: "A Gentle Introduction to Elixir Macros",
+            slug: "a-gentle-introduction-to-elixir-macros",
+            description: """
+            Qing Wu will lead you gently into the land of Elixir macros, you'll be an expert before you know it!
+
+            Elixir Macros are super powerful but confusing, this talk will give you a much better handle on them.
+            """,
+            slide_url: nil,
+            presenter: qing_wu
+          },
+        ]
+      },
       %Meetup{
         title: "☁️ Cloud Deployment and 🚨 Nerves",
         slug: "cloud-deployment-and-nerves",
@@ -937,8 +997,8 @@ defmodule Seeds do
       }
     ]
 
-    for raw_meetup <- raw_meetups do
-      ElixirSydney.Repo.insert!(raw_meetup)
+    for meetup <- meetups do
+      Repo.insert!(meetup, conflict_target: :slug, on_conflict: :replace_all)
     end
   end
 end

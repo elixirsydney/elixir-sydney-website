@@ -4,7 +4,8 @@ defmodule ElixirSydney.EventsTest do
   alias ElixirSydney.Events
   alias ElixirSydney.Events.Meetup
 
-  @create_attrs %{title: "some title", slug: "some_title", description: "A meetup", url: "http://example.com", date: ~D[2017-01-01], location: %{name: "venue", map_url: "http://example.com"}, talks: []}
+  @location_attrs %{name: "venue", address: "1 Abc St", suburb: "Sydney", postcode: "2000", state: "NSW", country: "Australia", map_url: "http://example.com"}
+  @create_attrs %{title: "some title", slug: "some_title", description: "A meetup", url: "http://example.com", date: ~D[2017-01-01], location: @location_attrs, talks: []}
   @update_attrs %{title: "some updated title"}
   @invalid_attrs %{title: nil}
 
