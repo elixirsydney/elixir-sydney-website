@@ -3,9 +3,8 @@ defmodule ElixirSydney.Events do
   The boundary for the Events system.
   """
 
-  import Ecto.{Query, Changeset}, warn: false
+  import Ecto.Query
   alias ElixirSydney.Repo
-
   alias ElixirSydney.Events.Meetup
 
   def next_meetup do
@@ -25,13 +24,6 @@ defmodule ElixirSydney.Events do
     |> Repo.all
   end
 
-  def all_meetups do
-    Meetup
-    |> order_by(desc: :date)
-    |> preload(talks: :presenter)
-    |> Repo.all
-  end
-
   @doc """
   Returns the list of meetups.
 
@@ -41,8 +33,11 @@ defmodule ElixirSydney.Events do
       [%Meetup{}, ...]
 
   """
-  def list_meetups do
-    Repo.all(Meetup)
+  def all_meetups do
+    Meetup
+    |> order_by(desc: :date)
+    |> preload([:location, talks: :presenter])
+    |> Repo.all
   end
 
   @doc """
@@ -59,7 +54,11 @@ defmodule ElixirSydney.Events do
       ** (Ecto.NoResultsError)
 
   """
-  def get_meetup!(id), do: Repo.get!(Meetup, id)
+  def get_meetup!(id) do
+    Meetup
+    |> preload([:location, talks: :presenter])
+    |> Repo.get!(id)
+  end
 
   @doc """
   Creates a meetup.
@@ -75,7 +74,7 @@ defmodule ElixirSydney.Events do
   """
   def create_meetup(attrs \\ %{}) do
     %Meetup{}
-    |> meetup_changeset(attrs)
+    |> Meetup.changeset(attrs)
     |> Repo.insert()
   end
 
@@ -93,7 +92,7 @@ defmodule ElixirSydney.Events do
   """
   def update_meetup(%Meetup{} = meetup, attrs) do
     meetup
-    |> meetup_changeset(attrs)
+    |> Meetup.changeset(attrs)
     |> Repo.update()
   end
 
@@ -123,12 +122,6 @@ defmodule ElixirSydney.Events do
 
   """
   def change_meetup(%Meetup{} = meetup) do
-    meetup_changeset(meetup, %{})
-  end
-
-  defp meetup_changeset(%Meetup{} = meetup, attrs) do
-    meetup
-    |> cast(attrs, [:title])
-    |> validate_required([:title])
+    Meetup.changeset(meetup, %{})
   end
 end

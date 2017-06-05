@@ -1,10 +1,10 @@
 defmodule ElixirSydney.EventsTest do
-  use ElixirSydney.DataCase
+  use ElixirSydney.Web.ModelCase
 
   alias ElixirSydney.Events
   alias ElixirSydney.Events.Meetup
 
-  @create_attrs %{title: "some title"}
+  @create_attrs %{title: "some title", slug: "some_title", description: "A meetup", url: "http://example.com", date: ~D[2017-01-01], location: %{name: "venue", map_url: "http://example.com"}, talks: []}
   @update_attrs %{title: "some updated title"}
   @invalid_attrs %{title: nil}
 
@@ -15,7 +15,7 @@ defmodule ElixirSydney.EventsTest do
 
   test "list_meetups/1 returns all meetups" do
     meetup = fixture(:meetup)
-    assert Events.list_meetups() == [meetup]
+    assert Events.all_meetups() == [meetup]
   end
 
   test "get_meetup! returns the meetup with given id" do
