@@ -281,7 +281,52 @@ defmodule Seeds do
       }, conflict_target: :name, on_conflict: :replace_all
     )
 
+    richard_heycock = Repo.insert!(
+      %Person{
+        name: "Richard Heycock",
+        avatar_url: "https://pbs.twimg.com/profile_images/52705913/fish_400x400.png",
+        meetup_url: "",
+        website_url: "",
+        twitter: "@filterfish"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
     meetups = [
+      %Meetup{
+        title: "API Gateways 🚪💂 and Requirements Makeovers 💅",
+        slug: "",
+        date: ~D[2017-07-05],
+        location: pivotal_office,
+        description: """
+          This month we are widening our horizons beyond Elixir with two englightening talks from two very clever people.
+
+          Richard will be giving a talk about API Gateways (with bonus wit and charisma) and why you should consider using one.
+        
+          Robin will take us on a journey to the promised land of beautifully distilled and clear requirements using "thinly disguised real world examples".
+
+          Expect both talks to be peppered with entertaining anecdotes and delightful little segues that we can discuss over some tasty hot chips later in the evening.
+        """,
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/239476421/",
+        talks: [
+          %Talk{
+            title: "An Introduction to API Gateways",
+            slug: "an-introduction-to-api-gateways",
+            description: """
+             API Gateways are a way of managing multiple resources and can be used to provide concerns such as authentication, request throttling, bot detection and all manner of things. This edifying and entertaining talk, given my one of the most inspiring and charismatic speakers of modern times, gives a brief introduction to this fascinating subject: what an API gateway really is, how you might use one, when you probably should use one and when you probably shouldn't. It'll be a roller coaster of a ride.
+            """,
+            presenter: richard_heycock
+          },
+          %Talk{
+            title: "Requirements Makeover",
+            slug: "requirements-makeover",
+            description: """
+              Robin will walk you through the process of converting a shopping list of random motherhood statements, acronyms and hopefully vague statements into useable requirements. Using thinly disguised real world examples, Robin will show you how to recognise common types of problem and describe the things developers will need to know to solve them. 
+            """,
+            slide_url: nil,
+            presenter: robin_hilliard
+          },
+        ]
+      },
       %Meetup{
         title: "⛱ Umbrella Apps and 💧 Elixir Macros",
         slug: "umbrella-apps-and-elixir-macros",
