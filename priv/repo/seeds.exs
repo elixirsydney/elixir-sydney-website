@@ -293,18 +293,20 @@ defmodule Seeds do
 
     meetups = [
       %Meetup{
-        title: "API Gateways 🚪💂 and Requirements Makeovers 💅",
+        title: "API Gateways 🚪💂, Requirements Makeovers 💅 and Fire Chickens 🔥🐔",
         slug: "",
         date: ~D[2017-07-05],
         location: pivotal_office,
         description: """
-          This month we are widening our horizons beyond Elixir with two englightening talks from two very clever people.
+          This month we are widening our horizons beyond Elixir. We have two excellent but not Elixir-specific talks in addition to an Elixir talk.
 
           Richard will be giving a talk about API Gateways (with bonus wit and charisma) and why you should consider using one.
         
           Robin will take us on a journey to the promised land of beautifully distilled and clear requirements using "thinly disguised real world examples".
 
-          Expect both talks to be peppered with entertaining anecdotes and delightful little segues that we can discuss over some tasty hot chips later in the evening.
+          Lastly, Jon will guide us through the steps to upgrade a Phoenix app from 1.2 to 1.3 while paying homage to the official emoji representation of our favorite web framework.
+
+          Expect all talks to be peppered with entertaining anecdotes and delightful little segues that we can discuss over some tasty hot chips later in the evening.
         """,
         url: "https://www.meetup.com/en-AU/sydney-ex/events/239476421/",
         talks: [
@@ -324,6 +326,15 @@ defmodule Seeds do
             """,
             slide_url: nil,
             presenter: robin_hilliard
+          },,
+          %Talk{
+            title: "🔥🐔 1.2 ~> 🔥🐔 1.3",
+            slug: "phoenix-upgrade",
+            description: """
+              Jon will take you through the steps for upgrading a Phoenix app and let us know what to watch out for!
+            """,
+            slide_url: nil,
+            presenter: jon_rowe
           },
         ]
       },
