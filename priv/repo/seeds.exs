@@ -408,7 +408,7 @@ defmodule Seeds do
           },
           %Talk{
             title: "🔥🐔 1.2 ~> 🔥🐔 1.3",
-            slug: "phoenix-upgrade",
+            slug: "phoenix-1.3-upgrade-guide",
             description: """
               Jon will take you through the steps for upgrading a Phoenix app and let us know what to watch out for!
             """,
