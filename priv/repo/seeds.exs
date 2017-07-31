@@ -151,9 +151,9 @@ defmodule Seeds do
       }, conflict_target: :name, on_conflict: :replace_all
     )
 
-    garret_heinlen = Repo.insert!(
+    garrett_heinlen = Repo.insert!(
       %Person{
-        name: "Garret Heinlen",
+        name: "Garrett Heinlen",
         avatar_url: "https://secure.meetupstatic.com/photos/member/b/7/a/4/member_184907012.jpeg",
         meetup_url: "https://www.meetup.com/en-AU/sydney-ex/members/98723842/",
         website_url: "",
@@ -256,8 +256,8 @@ defmodule Seeds do
         name: "Dave Parry",
         avatar_url: "https://secure.meetupstatic.com/photos/member/d/3/4/c/member_81234092.jpeg",
         meetup_url: "https://www.meetup.com/sydney-ex/members/12433325/",
-        website_url: "",
-        twitter: "@tobyhede"
+        website_url: "http://suranyami.com/",
+        twitter: "@suranyami"
       }, conflict_target: :name, on_conflict: :replace_all
     )
 
@@ -291,7 +291,86 @@ defmodule Seeds do
       }, conflict_target: :name, on_conflict: :replace_all
     )
 
+    cath_jones = Repo.insert!(
+      %Person{
+        name: "Cath Jones",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/7/d/4/0/highres_254012064.jpeg",
+        meetup_url: "https://www.meetup.com/sydney-ex/members/80708842/",
+        website_url: "http://bitgirl101.com/",
+        twitter: "@cathjones0"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
+    paul_fioravanti = Repo.insert!(
+      %Person{
+        name: "Paul Fioravanti",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/7/1/6/8/highres_67829032.jpeg",
+        meetup_url: "https://www.meetup.com/sydney-ex/members/58665142/",
+        website_url: "http://paulfioravanti.com",
+        twitter: "@paulfioravanti"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
     meetups = [
+      %Meetup{
+        title: "💃🏻 Elixir Girls Celebration",
+        slug: "elixir-girls-celebration",
+        date: ~D[2017-08-02],
+        location: pivotal_office,
+        description: """
+          This month we are celebrating Elixir Girls which happened over the weekend and it was an amazing event!
+          We'll be celebrating this with a recap of the event, and some talks aimed at those new to Elixir and Phoenix and programming as well as consolidating knowledge from the event.
+
+          Cath will recap everything that happened at the first Elixir Girls event and might even tell us what she has in store for the next one.
+
+          Garrett will talk us through how to design maintainable Phoenix web applications with service contracts.
+
+          Paul will reprise his talk about the Queen of functions `Enum.reduce`, in case you missed it the first time or didn't catch all the subtle details.
+
+          These talks will help you expand your knowledge of core Elixir and how to build more maintainable Phoenix apps.
+
+          See you there!
+
+          Josh, Andrew and James
+        """,
+        url: "https://www.meetup.com/en-AU/sydney-ex/events/239476421/",
+        talks: [
+          %Talk{
+            title: "Elixir Girls Recap",
+            slug: "elixir-girls-recap",
+            description: """
+              Cath will tell us all the great stuff that happened at the first event,
+              what you can do to help mentor, and possibly hint at plans for the next one.
+            """,
+            presenter: cath_jones
+          },
+          %Talk{
+            title: "Service Contracts in Phoenix",
+            slug: "phoenix-service-contracts",
+            description: """
+              Phoenix 1.3 emphasises "Contexts" as a way of decoupling your application from your web interface.
+
+              The next level of decoupling is using umbrella applications to enfore the service boundaries even further,
+              while still maintaining an easy to work with system.
+
+              Garrett will compare approaches and tell us why we need to separate the application from the web UI.
+            """,
+            slide_url: nil,
+            presenter: garrett_heinlen
+          },
+          %Talk{
+            title: "Enum.reduce",
+            slug: "enum-reduce",
+            description: """
+              Paul will talk about the powerful and fundamental function in Enum, `reduce`.
+
+              Definitely something you'll want in your functional programming toolkit.
+            """,
+            slide_url: nil,
+            presenter: jon_rowe
+          },
+        ]
+      },
       %Meetup{
         title: "API Gateways 🚪💂, Requirements Makeovers 💅 and Fire Chickens 🔥🐔",
         slug: "",
@@ -301,7 +380,7 @@ defmodule Seeds do
           This month we are widening our horizons beyond Elixir. We have two excellent but not Elixir-specific talks in addition to an Elixir talk.
 
           Richard will be giving a talk about API Gateways (with bonus wit and charisma) and why you should consider using one.
-        
+
           Robin will take us on a journey to the promised land of beautifully distilled and clear requirements using "thinly disguised real world examples".
 
           Lastly, Jon will guide us through the steps to upgrade a Phoenix app from 1.2 to 1.3 while paying homage to the official emoji representation of our favorite web framework.
@@ -322,7 +401,7 @@ defmodule Seeds do
             title: "Requirements Makeover",
             slug: "requirements-makeover",
             description: """
-              Robin will walk you through the process of converting a shopping list of random motherhood statements, acronyms and hopefully vague statements into useable requirements. Using thinly disguised real world examples, Robin will show you how to recognise common types of problem and describe the things developers will need to know to solve them. 
+              Robin will walk you through the process of converting a shopping list of random motherhood statements, acronyms and hopefully vague statements into useable requirements. Using thinly disguised real world examples, Robin will show you how to recognise common types of problem and describe the things developers will need to know to solve them.
             """,
             slide_url: nil,
             presenter: robin_hilliard
@@ -638,7 +717,7 @@ defmodule Seeds do
             A Primer into GenServers
             """,
             slide_url: "http://sydneyelixir.github.io/meetups/2016-12/presentations/serving_generally-garrett_heinlen/servering_generally.pdf",
-            presenter: garret_heinlen
+            presenter: garrett_heinlen
           }
         ]
       },
@@ -943,7 +1022,7 @@ defmodule Seeds do
             OTP in Action gen_fsm
             """,
             slide_url: "http://sydneyelixir.github.io/meetups/2016-02/intro_to_genfsm-garrett_heinlen/presentation.pdf",
-            presenter: garret_heinlen
+            presenter: garrett_heinlen
           },
           %Talk{
             title: "OTP in Action gen_server",
@@ -983,7 +1062,7 @@ defmodule Seeds do
             Intro to Ecto
             """,
             slide_url: "http://sydneyelixir.github.io/meetups/2016-01/intro_to_ecto-garrett_heinlen/presentation.pdf",
-            presenter: garret_heinlen
+            presenter: garrett_heinlen
           },
           %Talk{
             title: "Building Elixir web apps without Phoenix",
