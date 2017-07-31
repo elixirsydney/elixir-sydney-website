@@ -18,10 +18,10 @@
         <p>
           <%= if @talk.slide_url do %>
             <%= link "Slides", to: @talk.slide_url, target: "_blank" %>
-          <%= end %>
+          <% end %>
           <%= if @talk.video_url do %>
             <%= link "Video", to: @talk.video_url, target: "_blank" %>
-          <%= end %>
+          <% end %>
         </p>
       </div>
     </div>
