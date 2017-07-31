@@ -14,6 +14,13 @@ defmodule Seeds do
   alias ElixirSydney.Repo
   alias ElixirSydney.Events.{Meetup, Talk, Person, Location}
 
+  def delete_talks_meetups_speakers do
+    Repo.delete_all(Meetup)
+    Repo.delete_all(Talk)
+    Repo.delete_all(Person)
+    Repo.delete_all(Location)
+  end
+
   def insert_meetups do
     pivotal_office = Repo.insert!(%Location{
       name: "Pivotal Labs",
@@ -1133,9 +1140,10 @@ defmodule Seeds do
     ]
 
     for meetup <- meetups do
-      Repo.insert!(meetup, conflict_target: :slug, on_conflict: :replace_all)
+      Repo.insert!(meetup)
     end
   end
 end
 
+Seeds.delete_talks_meetups_speakers
 Seeds.insert_meetups
