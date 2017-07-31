@@ -405,7 +405,7 @@ defmodule Seeds do
             """,
             slide_url: nil,
             presenter: robin_hilliard
-          },,
+          },
           %Talk{
             title: "🔥🐔 1.2 ~> 🔥🐔 1.3",
             slug: "phoenix-upgrade",
