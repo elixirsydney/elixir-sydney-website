@@ -333,7 +333,7 @@ defmodule Seeds do
 
           Josh, Andrew and James
         """,
-        url: "https://www.meetup.com/en-AU/sydney-ex/events/239476421/",
+        url: "https://www.meetup.com/sydney-ex/events/241639658/",
         talks: [
           %Talk{
             title: "Elixir Girls Recap",
@@ -367,13 +367,13 @@ defmodule Seeds do
               Definitely something you'll want in your functional programming toolkit.
             """,
             slide_url: nil,
-            presenter: jon_rowe
+            presenter: paul_fioravanti
           },
         ]
       },
       %Meetup{
         title: "API Gateways 🚪💂, Requirements Makeovers 💅 and Fire Chickens 🔥🐔",
-        slug: "",
+        slug: "api-gateways-requirements-makeovers-phoenix-upgrades",
         date: ~D[2017-07-05],
         location: pivotal_office,
         description: """
