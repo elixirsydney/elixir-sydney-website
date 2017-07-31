@@ -394,7 +394,7 @@ defmodule Seeds do
 
           Expect all talks to be peppered with entertaining anecdotes and delightful little segues that we can discuss over some tasty hot chips later in the evening.
         """,
-        url: "https://www.meetup.com/en-AU/sydney-ex/events/239476421/",
+        url: "https://www.meetup.com/sydney-ex/events/240655721/",
         talks: [
           %Talk{
             title: "An Introduction to API Gateways",
