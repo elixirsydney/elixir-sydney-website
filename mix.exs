@@ -30,7 +30,7 @@ defmodule ElixirSydney.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.3.0-rc"},
+    [{:phoenix, "~> 1.3.0"},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
@@ -42,8 +42,8 @@ defmodule ElixirSydney.Mixfile do
      {:slugger, "~> 0.1"},
      {:timex, "~> 3.1"},
      {:timex_ecto, "~> 3.1"},
-     {:absinthe, "~> 1.3.0-beta"},
-     {:absinthe_plug, "~> 1.3.0-beta"}]
+     {:absinthe, "~> 1.3.1"},
+     {:absinthe_plug, "~> 1.3.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
