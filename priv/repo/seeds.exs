@@ -318,7 +318,91 @@ defmodule Seeds do
       }, conflict_target: :name, on_conflict: :replace_all
     )
 
+    dan_draper = Repo.insert!(
+      %Person{
+        name: "Dan Draper",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/7/5/1/d/highres_251369981.jpeg",
+        meetup_url: "https://www.meetup.com/sydney-ex/members/14319873/",
+        website_url: "https://coderdan.co/",
+        twitter: "@danieldraper"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
+    mark_ratjens = Repo.insert!(
+      %Person{
+        name: "Mark Ratjens",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/7/3/7/f/highres_270749567.jpeg",
+        meetup_url: "https://www.meetup.com/sydney-ex/members/236782055/",
+        twitter: "@markratjens"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
     meetups = [
+      %Meetup{
+        title: "🌏 Real World Elixir",
+        slug: "real-world-elixir",
+        date: ~D[2017-10-02],
+        location: pivotal_office,
+        description: """
+          This month we've got some great talks lined up and from some new speakers too!
+
+          Transformers: Age of the Function Mark Ratjens
+
+          Mark will take an introductory look at Functional Programming with Elixir through the lens of an experience OO practitioner.
+
+          Why Expert360 Chose an Elixir Umbrella Dan Draper
+
+          Expert360 has picked Elixir as a strategic technology choice, so Dan will tell us about some of the forces influencing this decision.
+          Including how using Elixir umbrella applications help the team deal with legacy systems while still delivering functionality quickly.
+
+          Practical GenServers Martin Stannard
+
+          Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
+
+          See you there!
+
+          Josh, Andrew and James
+        """,
+        url: "https://www.meetup.com/preview/sydney-ex/events/kdcqnmywnbgb",
+        talks: [
+          %Talk{
+            title: "Transformers: Age of the Function Mark Ratjens",
+            slug: "transformers-age-of-the-function",
+            description: """
+              Mark will take an introductory look at Functional Programming with Elixir through the lens of an experience OO practitioner.
+            """,
+            presenter: mark_ratjens
+          },
+          %Talk{
+            title: "Why Expert360 Chose an Elixir Umbrella",
+            slug: "why-expert360-chose-an-elixir-umbrella",
+            description: """
+              Expert360 has picked Elixir as a strategic technology choice, so Dan will tell us about some of the forces influencing this decision.
+              Including how using Elixir umbrella applications help the team deal with legacy systems while still delivering functionality quickly.
+            """,
+            slide_url: nil,
+            presenter: dan_draper
+          },
+        ]
+      },
+      %Meetup{
+        title: "Beginner Friendly Coding Night",
+        slug: "elixir-hack-night",
+        date: ~D[2017-09-06],
+        location: pivotal_office,
+        description: """
+          It's been a while since we had a practical coding night, so bring your laptop and bring your project ideas or questions and we'll have plenty of experienced Alchemists to help you with whatever you're working on.
+
+          Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
+
+          See you there!
+
+          Josh, Andrew and James
+        """,
+        url: "https://www.meetup.com/preview/sydney-ex/events/kdcqnmywmbjb",
+        talks: [
+        ]
+      },
       %Meetup{
         title: "💃🏻 Elixir Girls Celebration",
         slug: "elixir-girls-celebration",
