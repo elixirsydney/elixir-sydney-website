@@ -364,19 +364,8 @@ defmodule Seeds do
         description: """
         Another exciting lineup of Real World Elixir from expert practitioners this month. Also we have the privilege of welcoming not one but **two new speakers**!
 
-        ##### Hot Deploying with Distillery
-
-        Jeffrey Chan will take us through the process of taking your Elixir or Phoenix application and deploying it with Distillery and maybe even a little Docker. He'll also cover hot deployments which are some of the best kept secrets of the BEAM!
-
-        ##### Session Tracking with GenServers
-
-        Martin Stannard will deep dive into how Blake Education uses GenServers to track and analyse the interactions of high volumes of users on Reading Eggs and other products.
-
-        ##### Elixir Tooling: The Good and the Bad
-
-        Luke Swithenbank will cover the myriad of amazing tools at our disposal in the Elixir and Erlang ecosystem.
-        We personally can't wait for the new code formatter to arrive in Elixir 1.6, but he'll also cover Dialyzer and Dialyxir for type checking your code.
-        Credo for checking and ensuring consistent code style, HiPE, iEx and more. He'll also look at what opportunities there are for improvement in tooling and what you can do about it!
+        Jeffrey will cover Hot Deployment with Distillery, a little Docker. Martin will show us how Blake use GenServers to track user interactions.
+        Finally Luke will cover the gamut of great tools in the Elixir and Erlang ecosystem and constrast to other languages and toolchains.
 
         Elixir and Erlang developers of all levels are more than welcome, and if you're a complete beginner or just curious, then this a great chance to get started and get help from more experienced Elixir developers.
 
@@ -430,14 +419,9 @@ defmodule Seeds do
         description: """
         This month we've got some great talks lined up and from some new speakers too!
 
-        ##### Why Expert360 Chose an Elixir Umbrella Dan Draper
+        Dan will tell us about some of the forces influencing Expert360's decision to double down on Elixir and the "Modular Monolith".
 
-        Expert360 has picked Elixir as a strategic technology choice, so Dan will tell us about some of the forces influencing this decision.
-        Including how using Elixir umbrella applications help the team deal with legacy systems while still delivering functionality quickly.
-
-        ##### Transformers: Age of the Function Mark Ratjens
-
-        Mark will take an introductory look at Functional Programming with Elixir through the lens of an experience OO practitioner.
+        Mark will take a look at Functional Programming with Elixir through the lens of an experience OO practitioner.
 
         Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
 
