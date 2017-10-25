@@ -337,7 +337,88 @@ defmodule Seeds do
       }, conflict_target: :name, on_conflict: :replace_all
     )
 
+    jeffrey_chan = Repo.insert!(
+      %Person{
+        name: "Jeffrey Chan",
+        avatar_url: "https://pbs.twimg.com/profile_images/3747677814/e399d57ad977e8afd4367459034c5d22_400x400.jpeg",
+        meetup_url: "https://www.meetup.com/sydney-ex/members/28936042/",
+        twitter: "@jgmchan"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
+    luke_swithenbank = Repo.insert!(
+      %Person{
+        name: "Luke Swithenbank",
+        avatar_url: "https://secure.meetupstatic.com/photos/member/5/9/b/2/member_109342962.jpeg",
+        meetup_url: "https://www.meetup.com/sydney-ex/members/88360622/",
+        twitter: "@"
+      }, conflict_target: :name, on_conflict: :replace_all
+    )
+
     meetups = [
+      %Meetup{
+        title: "🌎 Real World Elixir 2: Hot Deploys, Tracking and Tools",
+        slug: "real-world-elixir-hot-deployment-tracking-and-tools",
+        date: ~D[2017-11-01],
+        location: pivotal_office,
+        description: """
+        Another exciting lineup of Real World Elixir from expert practitioners this month. Also we welcome 2 new speakers!
+
+        ### Hot Deploying with Distillery - Jeffrey Chan
+
+        Jeffrey will take us through the process of taking your Elixir or Phoenix application and deploying it with Distillery and maybe even a little Docker. He'll also cover hot deployments which are some of the best kept secrets of the BEAM!
+
+        ### Session Tracking with GenServers - Martin Stannard
+
+        Martin will deep dive into how Blake Education uses GenServers to track and analyse the interactions of high volumes of users on Reading Eggs and other products.
+
+        ### Elixir Tooling: The Good and the Bad - Luke Swithenbank
+
+        Luke will cover the myriad of amazing tools at our disposal in the Elixir and Erlang ecosystem. We personally can't wait for the new code formatter to arrive in Elixir 1.6, but he'll also cover Dialyzer and Dialyxir for type checking your code. Credo for checking and ensuring consistent code style, HiPE, iEx and more. He'll also look at what opportunities there are for improvement in tooling and what you can do about it!
+
+        Elixir and Erlang developers of all levels are more than welcome, and if you're a complete beginner or just curious, then this a great chance to get started and get help from more experienced Elixir developers.
+
+        See you there,
+        *Josh, James and Andrew*
+        """,
+        url: "https://www.meetup.com/preview/sydney-ex/events/kdcqnmywpbcb",
+        talks: [
+          %Talk{
+            title: "Hot Deploying with Distillery and Docker",
+            slug: "hot-deploying-with-distillery-and-docker",
+            description: """
+            Jeffrey will take us through the process of taking your Elixir or Phoenix application and deploying it with Distillery and maybe even a little bit of Docker.
+
+            He'll also cover hot deployments which are some of the best kept secrets of the BEAM!
+            """,
+            presenter: jeffrey_chan
+          },
+          %Talk{
+            title: "Session Tracking with GenServers",
+            slug: "session-tracking-with-genservers",
+            description: """
+            Martin will deep dive into how Blake Education uses GenServers to track and analyse the interactions of high volumes of users on Reading Eggs and other products.
+
+            We've looked at GenServers before and we know that they are used for managing state in your Elixir applications, but this will be a great introduction into a very practical use case for them.
+            """,
+            slide_url: nil,
+            presenter: martin_stannard
+          },
+          %Talk{
+            title: "Elixir Tooling: The Good and the Bad",
+            slug: "elixir-tooling-the-good-and-the-bad",
+            description: """
+            Luke will cover the myriad of amazing tools at our disposal in the Elixir and Erlang ecosystem.
+            We personally can't wait for the new code formatter to arrive in Elixir 1.6, but he'll also cover Dialyzer and Dialyxir for type checking your code.
+            Credo for checking and ensuring consistent code style, HiPE, iEx and more.
+
+            He'll also look at what opportunities there are for improvement in tooling and what you can do about it!
+            """,
+            slide_url: nil,
+            presenter: luke_swithenbank
+          },
+        ]
+      },
       %Meetup{
         title: "🌏 Real World Elixir",
         slug: "real-world-elixir",
@@ -346,16 +427,14 @@ defmodule Seeds do
         description: """
           This month we've got some great talks lined up and from some new speakers too!
 
-          Transformers: Age of the Function Mark Ratjens
-
-          Mark will take an introductory look at Functional Programming with Elixir through the lens of an experience OO practitioner.
-
-          Why Expert360 Chose an Elixir Umbrella Dan Draper
+          ### Why Expert360 Chose an Elixir Umbrella Dan Draper
 
           Expert360 has picked Elixir as a strategic technology choice, so Dan will tell us about some of the forces influencing this decision.
           Including how using Elixir umbrella applications help the team deal with legacy systems while still delivering functionality quickly.
 
-          Practical GenServers Martin Stannard
+          ### Transformers: Age of the Function Mark Ratjens
+
+          Mark will take an introductory look at Functional Programming with Elixir through the lens of an experience OO practitioner.
 
           Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
 
