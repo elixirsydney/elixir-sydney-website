@@ -351,7 +351,7 @@ defmodule Seeds do
         name: "Luke Swithenbank",
         avatar_url: "https://secure.meetupstatic.com/photos/member/5/9/b/2/member_109342962.jpeg",
         meetup_url: "https://www.meetup.com/sydney-ex/members/88360622/",
-        twitter: "@"
+        twitter: "@lswith"
       }, conflict_target: :name, on_conflict: :replace_all
     )
 
