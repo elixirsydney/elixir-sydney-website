@@ -15,9 +15,9 @@ defmodule Seeds do
   alias ElixirSydney.Events.{Meetup, Talk, Person, Location}
 
   def delete_talks_meetups_speakers do
-    Repo.delete_all(Meetup)
     Repo.delete_all(Talk)
     Repo.delete_all(Person)
+    Repo.delete_all(Meetup)
     Repo.delete_all(Location)
   end
 
@@ -362,23 +362,26 @@ defmodule Seeds do
         date: ~D[2017-11-01],
         location: pivotal_office,
         description: """
-        Another exciting lineup of Real World Elixir from expert practitioners this month. Also we welcome 2 new speakers!
+        Another exciting lineup of Real World Elixir from expert practitioners this month. Also we have the privilege of welcoming not one but **two new speakers**!
 
-        ### Hot Deploying with Distillery - Jeffrey Chan
+        ##### Hot Deploying with Distillery
 
-        Jeffrey will take us through the process of taking your Elixir or Phoenix application and deploying it with Distillery and maybe even a little Docker. He'll also cover hot deployments which are some of the best kept secrets of the BEAM!
+        Jeffrey Chan will take us through the process of taking your Elixir or Phoenix application and deploying it with Distillery and maybe even a little Docker. He'll also cover hot deployments which are some of the best kept secrets of the BEAM!
 
-        ### Session Tracking with GenServers - Martin Stannard
+        ##### Session Tracking with GenServers
 
-        Martin will deep dive into how Blake Education uses GenServers to track and analyse the interactions of high volumes of users on Reading Eggs and other products.
+        Martin Stannard will deep dive into how Blake Education uses GenServers to track and analyse the interactions of high volumes of users on Reading Eggs and other products.
 
-        ### Elixir Tooling: The Good and the Bad - Luke Swithenbank
+        ##### Elixir Tooling: The Good and the Bad
 
-        Luke will cover the myriad of amazing tools at our disposal in the Elixir and Erlang ecosystem. We personally can't wait for the new code formatter to arrive in Elixir 1.6, but he'll also cover Dialyzer and Dialyxir for type checking your code. Credo for checking and ensuring consistent code style, HiPE, iEx and more. He'll also look at what opportunities there are for improvement in tooling and what you can do about it!
+        Luke Swithenbank will cover the myriad of amazing tools at our disposal in the Elixir and Erlang ecosystem.
+        We personally can't wait for the new code formatter to arrive in Elixir 1.6, but he'll also cover Dialyzer and Dialyxir for type checking your code.
+        Credo for checking and ensuring consistent code style, HiPE, iEx and more. He'll also look at what opportunities there are for improvement in tooling and what you can do about it!
 
         Elixir and Erlang developers of all levels are more than welcome, and if you're a complete beginner or just curious, then this a great chance to get started and get help from more experienced Elixir developers.
 
         See you there,
+
         *Josh, James and Andrew*
         """,
         url: "https://www.meetup.com/preview/sydney-ex/events/kdcqnmywpbcb",
@@ -425,22 +428,22 @@ defmodule Seeds do
         date: ~D[2017-10-02],
         location: pivotal_office,
         description: """
-          This month we've got some great talks lined up and from some new speakers too!
+        This month we've got some great talks lined up and from some new speakers too!
 
-          ### Why Expert360 Chose an Elixir Umbrella Dan Draper
+        ##### Why Expert360 Chose an Elixir Umbrella Dan Draper
 
-          Expert360 has picked Elixir as a strategic technology choice, so Dan will tell us about some of the forces influencing this decision.
-          Including how using Elixir umbrella applications help the team deal with legacy systems while still delivering functionality quickly.
+        Expert360 has picked Elixir as a strategic technology choice, so Dan will tell us about some of the forces influencing this decision.
+        Including how using Elixir umbrella applications help the team deal with legacy systems while still delivering functionality quickly.
 
-          ### Transformers: Age of the Function Mark Ratjens
+        ##### Transformers: Age of the Function Mark Ratjens
 
-          Mark will take an introductory look at Functional Programming with Elixir through the lens of an experience OO practitioner.
+        Mark will take an introductory look at Functional Programming with Elixir through the lens of an experience OO practitioner.
 
-          Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
+        Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
 
-          See you there!
+        See you there!
 
-          Josh, Andrew and James
+        Josh, Andrew and James
         """,
         url: "https://www.meetup.com/preview/sydney-ex/events/kdcqnmywnbgb",
         talks: [
@@ -470,13 +473,13 @@ defmodule Seeds do
         date: ~D[2017-09-06],
         location: pivotal_office,
         description: """
-          It's been a while since we had a practical coding night, so bring your laptop and bring your project ideas or questions and we'll have plenty of experienced Alchemists to help you with whatever you're working on.
+        It's been a while since we had a practical coding night, so bring your laptop and bring your project ideas or questions and we'll have plenty of experienced Alchemists to help you with whatever you're working on.
 
-          Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
+        Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
 
-          See you there!
+        See you there!
 
-          Josh, Andrew and James
+        Josh, Andrew and James
         """,
         url: "https://www.meetup.com/preview/sydney-ex/events/kdcqnmywmbjb",
         talks: [
@@ -488,20 +491,20 @@ defmodule Seeds do
         date: ~D[2017-08-02],
         location: pivotal_office,
         description: """
-          This month we are celebrating Elixir Girls which happened over the weekend and it was an amazing event!
-          We'll be celebrating this with a recap of the event, and some talks aimed at those new to Elixir and Phoenix and programming as well as consolidating knowledge from the event.
+        This month we are celebrating Elixir Girls which happened over the weekend and it was an amazing event!
+        We'll be celebrating this with a recap of the event, and some talks aimed at those new to Elixir and Phoenix and programming as well as consolidating knowledge from the event.
 
-          Cath will recap everything that happened at the first Elixir Girls event and might even tell us what she has in store for the next one.
+        Cath will recap everything that happened at the first Elixir Girls event and might even tell us what she has in store for the next one.
 
-          Garrett will talk us through how to design maintainable Phoenix web applications with service contracts.
+        Garrett will talk us through how to design maintainable Phoenix web applications with service contracts.
 
-          Paul will reprise his talk about the Queen of functions `Enum.reduce`, in case you missed it the first time or didn't catch all the subtle details.
+        Paul will reprise his talk about the Queen of functions `Enum.reduce`, in case you missed it the first time or didn't catch all the subtle details.
 
-          These talks will help you expand your knowledge of core Elixir and how to build more maintainable Phoenix apps.
+        These talks will help you expand your knowledge of core Elixir and how to build more maintainable Phoenix apps.
 
-          See you there!
+        See you there!
 
-          Josh, Andrew and James
+        Josh, Andrew and James
         """,
         url: "https://www.meetup.com/sydney-ex/events/241639658/",
         talks: [
@@ -518,12 +521,12 @@ defmodule Seeds do
             title: "Service Contracts in Phoenix",
             slug: "phoenix-service-contracts",
             description: """
-              Phoenix 1.3 emphasises "Contexts" as a way of decoupling your application from your web interface.
+            Phoenix 1.3 emphasises "Contexts" as a way of decoupling your application from your web interface.
 
-              The next level of decoupling is using umbrella applications to enfore the service boundaries even further,
-              while still maintaining an easy to work with system.
+            The next level of decoupling is using umbrella applications to enfore the service boundaries even further,
+            while still maintaining an easy to work with system.
 
-              Garrett will compare approaches and tell us why we need to separate the application from the web UI.
+            Garrett will compare approaches and tell us why we need to separate the application from the web UI.
             """,
             slide_url: nil,
             presenter: garrett_heinlen
@@ -542,7 +545,7 @@ defmodule Seeds do
         ]
       },
       %Meetup{
-        title: "API Gateways 🚪💂, Requirements Makeovers 💅 and Fire Chickens 🔥🐔",
+        title: "API Gateways 🚪💂, Requirements Makeovers 💅 and Phoenix 🔥🐔",
         slug: "api-gateways-requirements-makeovers-phoenix-upgrades",
         date: ~D[2017-07-05],
         location: pivotal_office,
