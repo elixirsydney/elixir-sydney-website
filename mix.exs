@@ -19,7 +19,7 @@ defmodule ElixirSydney.Mixfile do
   def application do
     [mod: {ElixirSydney, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :httpoison]]
   end
 
   # Specifies which paths to compile per environment.
@@ -42,8 +42,9 @@ defmodule ElixirSydney.Mixfile do
      {:slugger, "~> 0.1"},
      {:timex, "~> 3.1"},
      {:timex_ecto, "~> 3.1"},
-     {:absinthe, "~> 1.3.1"},
-     {:absinthe_plug, "~> 1.3.1"}]
+     {:absinthe_plug, "~> 1.4.0-rc"},
+     {:absinthe_phoenix, "~> 1.4.0-rc"},
+     {:httpoison, "~> 0.13"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

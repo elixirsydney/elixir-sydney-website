@@ -1,0 +1,11 @@
+# Rename this file to .envrc after editing with your private keys
+#
+# You can find your meetup.com [API Key](https://secure.meetup.com/meetup_api/key/).
+#
+# Then to load the environment variables:
+#
+#    source .envrc
+#
+# Or use something like [direnv](https://direnv.net/)
+
+export MEETUP_API_KEY=<Insert your MEETUP.COM key>

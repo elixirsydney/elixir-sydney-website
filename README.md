@@ -1,7 +1,8 @@
-# ElixirSydney
+# Elixir Sydney Website
 
-To start your Phoenix app:
+## Getting Started
 
+  * Clone the repo
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Install Node.js dependencies with `npm install`
@@ -9,7 +10,18 @@ To start your Phoenix app:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+## meetup.com Integration
+
+When creating a new meetup we make a call to Meetup.com to find out the next meetup URL.
+
+Edit `.envrc.example` with your meetup.com [API Key](https://secure.meetup.com/meetup_api/key/).
+
+Then rename to `.envrc` and load them with:
+
+    source .envrc
+
+Or, you can use [direnv](https://direnv.net/), to setup local dev environment variables `brew install direnv`.
+
 
 ## Learn more
 

@@ -1,0 +1,23 @@
+{
+  "query": "mutation createMeetup($input: CreateMeetupInput!) {
+    createMeetup(input: $input) {
+      meetup {
+        date
+        description
+        slug
+        title
+        url
+        location {
+          mapUrl
+          name
+        }
+      }
+    }
+  }",
+  "variables": {
+    "input": {
+      "title": "amazing test title"
+    }
+  },
+  "operationName": "createMeetup"
+}

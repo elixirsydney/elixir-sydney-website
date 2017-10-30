@@ -17,3 +17,6 @@ config :elixir_sydney, ElixirSydney.Repo,
   database: "elixir_sydney_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :elixir_sydney, :meetup_client,
+  http_client: ElixirSydney.Test.HTTPClient

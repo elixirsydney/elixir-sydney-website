@@ -17,11 +17,18 @@ defmodule ElixirSydney.Events.Meetup do
   end
 
   def changeset(%Meetup{} = meetup, attrs) do
-    meetup
-    |> Repo.preload([:location, :talks])
-    |> cast(attrs, [:title, :slug, :description, :url, :date])
-    |> cast_assoc(:location, required: true)
-    |> cast_assoc(:talks)
-    |> validate_required([:title, :slug, :description, :url, :date])
+    changeset =
+      meetup
+      |> Repo.preload([:location, :talks])
+      |> cast(attrs, [:title, :slug, :description, :url, :date])
+      |> cast_assoc(:talks)
+
+    changeset =
+      case Map.get(attrs, :location) do
+        nil -> cast_assoc(changeset, :location, required: true)
+        location -> put_assoc(changeset, :location, location)
+      end
+
+    validate_required(changeset, [:title, :slug, :description, :url, :date])
   end
 end

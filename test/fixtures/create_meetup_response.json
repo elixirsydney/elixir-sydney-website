@@ -1,0 +1,17 @@
+{
+  "data": {
+    "createMeetup": {
+      "meetup": {
+        "url": "https://www.meetup.com/sydney-ex/events/241639669/",
+        "title": "amazing test title",
+        "slug": "amazing-test-title",
+        "location": {
+          "name": "venue",
+          "mapUrl": "http://example.com"
+        },
+        "description": "Test Description",
+        "date": "2017-11-01"
+      }
+    }
+  }
+}
