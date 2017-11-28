@@ -357,6 +357,31 @@ defmodule Seeds do
 
     meetups = [
       %Meetup{
+        title: "⚡️ Elixir Trivia Night",
+        slug: "elixir-trivia-night",
+        date: ~D[2017-12-06],
+        location: pivotal_office,
+        description: """
+        We're hosting a totally different edition of Elixir Sydney this month.
+        There won't be any talks but a brand new format where we form teams and play
+        a friendly little game of Elixir Trivia.
+
+        In a format we've blatantly ~stolen~ borrowed from the end of year Cocoaheads trivia festival,
+        we'll be throwing random questions at you which will stretch your noodles and maybe even
+        teach you some interesting facts about Elixir or Erlang. Or maybe jsut programming in general.
+
+        Elixir and Erlang developers of all levels are welcome.
+        Whether you are a complete beginner or just little curious about the powers of OTP and the BEAM.
+        The Elixir Sydney Meetup is a great chance to get started and mingle with experienced Elixir developers and others just starting the journey.
+
+        See you there,
+
+        *Josh, James and Andrew*
+        """,
+        url: "https://www.meetup.com/sydney-ex/events/kdcqnmywqbjb/",
+        talks: []
+      },
+      %Meetup{
         title: "🌎 Real World Elixir 2: Hot Deploys, Tracking and Tools",
         slug: "real-world-elixir-hot-deployment-tracking-and-tools",
         date: ~D[2017-11-01],
@@ -373,7 +398,7 @@ defmodule Seeds do
 
         *Josh, James and Andrew*
         """,
-        url: "https://www.meetup.com/preview/sydney-ex/events/kdcqnmywpbcb",
+        url: "https://www.meetup.com/sydney-ex/events/kdcqnmywpbcb",
         talks: [
           %Talk{
             title: "Hot Deploying with Distillery and Docker",
