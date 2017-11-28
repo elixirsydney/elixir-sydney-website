@@ -366,7 +366,7 @@ defmodule Seeds do
         There won't be any talks but a brand new format where we form teams and play
         a friendly little game of Elixir Trivia.
 
-        In a format we've blatantly ~stolen~ borrowed from the end of year Cocoaheads trivia festival,
+        In a format we've blatantly ~~stolen~~ borrowed from the end of year Cocoaheads trivia festival,
         we'll be throwing random questions at you which will stretch your noodles and maybe even
         teach you some interesting facts about Elixir or Erlang. Or maybe jsut programming in general.
 
