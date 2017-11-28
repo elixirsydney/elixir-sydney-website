@@ -368,7 +368,7 @@ defmodule Seeds do
 
         In a format we've blatantly ~~stolen~~ borrowed from the end of year Cocoaheads trivia festival,
         we'll be throwing random questions at you which will stretch your noodles and maybe even
-        teach you some interesting facts about Elixir or Erlang. Or maybe jsut programming in general.
+        teach you some interesting facts about Elixir or Erlang. Or maybe just programming in general.
 
         Elixir and Erlang developers of all levels are welcome.
         Whether you are a complete beginner or just little curious about the powers of OTP and the BEAM.
