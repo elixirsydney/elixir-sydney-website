@@ -1,6 +1,6 @@
 .hero-meetup--next .hero-background {
-  background:url("/images/bridge.jpg") no-repeat center center / cover;
-  background-color:#333
+  background: url("/images/bridge.jpg") no-repeat center center / cover;
+  background-color: #333;
 }
 
 .welcome {
@@ -9,7 +9,7 @@
   z-index: 1000;
 }
 
-.home-about{
+.home-about {
   text-align: center;
   margin: 3rem 0;
 }
@@ -20,4 +20,9 @@
 
 .logo img {
   height: 8rem;
+}
+
+.home-code-of-conduct {
+  margin-left: 25%;
+  margin-right: 25%;
 }

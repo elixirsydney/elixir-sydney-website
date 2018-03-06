@@ -16,6 +16,9 @@
             <li class="nav-item-about">
               <%= link "About", to: page_path(@conn, :about) %>
             </li>
+            <li class="nav-item-about">
+              <%= link "Code of Conduct", to: page_path(@conn, :code_of_conduct) %>
+            </li>
             <li class="nav-item-meetups">
               <%= link "Meetups", to: page_path(@conn, :meetups) %>
             </li>

@@ -20,7 +20,7 @@ defmodule ElixirSydney.Web.Router do
 
     get "/", PageController, :index
     get "/about", PageController, :about
-    # get "/conduct", PageController, :conduct
+    get "/code_of_conduct", PageController, :code_of_conduct
     get "/meetups", PageController, :meetups
     get "/meetup/:slug", PageController, :meetup, param: "slug"
   end

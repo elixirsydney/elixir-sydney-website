@@ -13,6 +13,11 @@ defmodule ElixirSydney.Web.PageController do
       page_name: "about"
   end
 
+  def code_of_conduct(conn, _params) do
+    render conn, "code_of_conduct.html",
+      page_name: "code_of_conduct"
+  end
+
   def meetups(conn, _params) do
     render conn, "meetups.html",
       next_meetup: Events.next_meetup,
