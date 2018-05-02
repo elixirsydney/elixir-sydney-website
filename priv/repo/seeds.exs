@@ -22,6 +22,12 @@ defmodule Seeds do
   end
 
   def insert_meetups do
+    expert_360_office = Repo.insert!(%Location{
+      name: "Expert 360",
+      address: "Level 3/14 Martin Place",
+      map_url: "https://goo.gl/maps/4zPjN29CdX32"
+    }, conflict_target: :name, on_conflict: :replace_all)
+
     pivotal_office = Repo.insert!(%Location{
       name: "Pivotal Labs",
       address: "Level 11, 155 Clarence Street",
@@ -356,6 +362,56 @@ defmodule Seeds do
     )
 
     meetups = [
+      %Meetup{
+        title: "🔦 Deployment & DevOps",
+        slug: "deployment-and-devops-and-mob-coding",
+        date: ~D[2018-05-02],
+        location: expert_360_office,
+        description: """
+        We're back at Expert 360 this month a great talk and some mob coding:
+
+        Jeff Chan - Kubernetes and Elixir
+
+        Exercism mob-coding
+
+        Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
+
+        Thanks to Expert360 for hosting us and to Alembic for the food.
+
+        Please DON'T FORGET to double check the new location!
+
+        See you there,
+
+        *Josh, James and Andrew*
+        """,
+        url: "https://www.meetup.com/sydney-ex/events/247372284/",
+        talks: []
+      },
+      %Meetup{
+        title: "🔦 Pattern Matching and Immutability",
+        slug: "pattern-matching-and-immutability",
+        date: ~D[2018-04-04],
+        location: expert_360_office,
+        description: """
+        We've got a new venue this month and some great talks:
+
+        Fiona McCawley - What I've learnt about Pattern Matching
+        James Sadler - The Magic of Immutability inside the BEAM
+        Rob Howard - Parsers and Combinators: A Look at NimbleParsec
+
+        Beginners are more than welcome, and this a great chance to get started and get help from more experienced Elixir developers.
+
+        Thanks to Expert360 for hosting us and to Alembic for the food.
+
+        Please DON'T FORGET to double check the new location!
+
+        See you there,
+
+        *Josh, James and Andrew*
+        """,
+        url: "https://www.meetup.com/sydney-ex/events/247015397/",
+        talks: []
+      },
       %Meetup{
         title: "⚡️ Elixir Trivia Night",
         slug: "elixir-trivia-night",
