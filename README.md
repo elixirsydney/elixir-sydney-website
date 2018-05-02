@@ -22,6 +22,13 @@ Then rename to `.envrc` and load them with:
 
 Or, you can use [direnv](https://direnv.net/), to setup local dev environment variables `brew install direnv`.
 
+## Deployment to Netlify
+
+Once you've updated and run the seeds, start the app on locally and run the following command:
+
+	httrack 127.0.0.1:4000 -w -O /tmp/elixir.sydney
+
+Then drag and drop the `/tmp/elixir.sydney/127.0.0.1_4000` folder to Netlify and you're all done.
 
 ## Learn more
 
